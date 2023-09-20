@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 758ab7785c81417a144cec6fba0a3b89
+  docChecksum: a628fae9e13531803d4dfde1150772f0
   docVersion: 2.0.52
   speakeasyVersion: 1.88.0
   generationVersion: 2.118.1
@@ -15,10 +15,11 @@ generation:
 features:
   typescript:
     core: 2.87.3
+    globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
     inputOutputModels: 2.81.1
 typescript:
-  version: 0.1.0
+  version: 0.1.1
   author: testing
   clientServerStatusCodesAsErrors: true
   maxMethodParams: 0

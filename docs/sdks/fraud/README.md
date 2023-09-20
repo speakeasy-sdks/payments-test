@@ -20,7 +20,12 @@ Retrieve fraud score of a payment instrument with cardholder information without
 import { TestingPayments } from "testingPayments";
 import { V2FraudCheckByIdGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.fraud.v2FraudCheckByIdGet({
   id: "12cc0270-7bed-11e9-a188-1763956dd7f6",
@@ -58,7 +63,12 @@ import { V2FraudCheckPostResponse } from "testingPayments/dist/sdk/models/operat
 import { Currency } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.fraud.v2FraudCheckPost({
   fraudCheckRequestInput: {
@@ -180,7 +190,12 @@ Retrieve fraud score of a payment instrument with cardholder information without
 import { TestingPayments } from "testingPayments";
 import { V2FraudCheckgetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.fraud.v2FraudCheckget({
   merchantId: "991234567890",

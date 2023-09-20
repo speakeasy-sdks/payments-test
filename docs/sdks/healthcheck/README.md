@@ -20,7 +20,12 @@ Health check for payments
 import { TestingPayments } from "testingPayments";
 import { V2PaymentHealthGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.healthCheck.v2PaymentHealthGet().then((res: V2PaymentHealthGetResponse) => {
   if (res.statusCode == 200) {
@@ -51,7 +56,12 @@ Health check for refunds
 import { TestingPayments } from "testingPayments";
 import { V2RefundHealthGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.healthCheck.v2RefundHealthGet().then((res: V2RefundHealthGetResponse) => {
   if (res.statusCode == 200) {
@@ -82,7 +92,12 @@ Health check for verifications
 import { TestingPayments } from "testingPayments";
 import { V2VerificationHealthGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.healthCheck.v2VerificationHealthGet().then((res: V2VerificationHealthGetResponse) => {
   if (res.statusCode == 200) {

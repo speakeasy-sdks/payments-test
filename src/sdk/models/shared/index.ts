@@ -74,6 +74,7 @@ export * from "./retailaddenda";
 export * from "./risk";
 export * from "./riskdecision";
 export * from "./riskelement";
+export * from "./security";
 export * from "./shipto";
 export * from "./softmerchant";
 export * from "./sourceaccountinformation";

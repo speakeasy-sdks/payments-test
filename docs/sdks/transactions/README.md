@@ -30,7 +30,12 @@ Request capture details for a specific capture request by captureId
 import { TestingPayments } from "testingPayments";
 import { V2CaptureByIdGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.transactions.v2CaptureByIdGet({
   id: "12cc0270-7bed-11e9-a188-1763956dd7f6",
@@ -67,7 +72,12 @@ Request capture details for a specific capture request
 import { TestingPayments } from "testingPayments";
 import { V2CaptureGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.transactions.v2CaptureGet({
   merchantId: "991234567890",
@@ -122,7 +132,12 @@ import {
 } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.transactions.v2CapturePost({
   captureRequestInput: {
@@ -354,7 +369,12 @@ Get a specific payment transaction by transaction Id
 import { TestingPayments } from "testingPayments";
 import { V2PaymentByIdGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.transactions.v2PaymentByIdGet({
   id: "12cc0270-7bed-11e9-a188-1763956dd7f6",
@@ -390,7 +410,12 @@ Request Original Authorization Transaction details
 import { TestingPayments } from "testingPayments";
 import { V2PaymentGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.transactions.v2PaymentGet({
   merchantId: "991234567890",
@@ -428,7 +453,12 @@ import { TestingPayments } from "testingPayments";
 import { V2PaymentPatchResponse } from "testingPayments/dist/sdk/models/operations";
 import { CaptureMethod } from "testingPayments/dist/sdk/models/shared";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.transactions.v2PaymentPatch({
   id: "12cc0270-7bed-11e9-a188-1763956dd7f6",
@@ -497,7 +527,12 @@ import {
 } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.transactions.v2PaymentPost({
   merchantId: "991234567890",
@@ -768,7 +803,12 @@ Get a specific refund transaction by transaction Id
 import { TestingPayments } from "testingPayments";
 import { V2RefundByIdGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.transactions.v2RefundByIdGet({
   id: "12cc0270-7bed-11e9-a188-1763956dd7f6",
@@ -804,7 +844,12 @@ Creates a refund request and returns funds to the consumer. 1. For refund associ
 import { TestingPayments } from "testingPayments";
 import { V2RefundGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.transactions.v2RefundGet({
   merchantId: "991234567890",
@@ -853,7 +898,12 @@ import {
 } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.transactions.v2RefundPost({
   merchantId: "991234567890",
@@ -1028,7 +1078,12 @@ Request Original Authorization Transaction details for an incoming notification 
 import { TestingPayments } from "testingPayments";
 import { V2VerificationByIdGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.transactions.v2VerificationByIdGet({
   id: "12cc0270-7bed-11e9-a188-1763956dd7f6",
@@ -1065,7 +1120,12 @@ Creates a refund request and returns funds to the consumer. 1. For refund associ
 import { TestingPayments } from "testingPayments";
 import { V2VerificationGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.transactions.v2VerificationGet({
   merchantId: "991234567890",
@@ -1120,7 +1180,12 @@ import {
 } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
-const sdk = new TestingPayments();
+const sdk = new TestingPayments({
+  security: {
+    password: "",
+    username: "",
+  },
+});
 
 sdk.transactions.v2VerificationPost({
   merchantId: "991234567890",
