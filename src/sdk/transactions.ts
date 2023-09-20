@@ -7,7 +7,7 @@ import * as errors from "./models/errors";
 import * as operations from "./models/operations";
 import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 /**
  * Initiating and processing a payment
@@ -48,7 +48,7 @@ export class Transactions {
             globalSecurity = new shared.Security(globalSecurity);
         }
         const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,
@@ -151,7 +151,7 @@ export class Transactions {
             globalSecurity = new shared.Security(globalSecurity);
         }
         const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,
@@ -269,7 +269,7 @@ export class Transactions {
             globalSecurity = new shared.Security(globalSecurity);
         }
         const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
             ...config?.headers,
@@ -375,7 +375,7 @@ export class Transactions {
             globalSecurity = new shared.Security(globalSecurity);
         }
         const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,
@@ -478,7 +478,7 @@ export class Transactions {
             globalSecurity = new shared.Security(globalSecurity);
         }
         const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,
@@ -592,7 +592,7 @@ export class Transactions {
             globalSecurity = new shared.Security(globalSecurity);
         }
         const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
             ...config?.headers,
@@ -708,7 +708,7 @@ export class Transactions {
             globalSecurity = new shared.Security(globalSecurity);
         }
         const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
             ...config?.headers,
@@ -814,7 +814,7 @@ export class Transactions {
             globalSecurity = new shared.Security(globalSecurity);
         }
         const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,
@@ -917,7 +917,7 @@ export class Transactions {
             globalSecurity = new shared.Security(globalSecurity);
         }
         const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,
@@ -1031,7 +1031,7 @@ export class Transactions {
             globalSecurity = new shared.Security(globalSecurity);
         }
         const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
             ...config?.headers,
@@ -1137,7 +1137,7 @@ export class Transactions {
             globalSecurity = new shared.Security(globalSecurity);
         }
         const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,
@@ -1241,7 +1241,7 @@ export class Transactions {
             globalSecurity = new shared.Security(globalSecurity);
         }
         const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,
@@ -1359,7 +1359,7 @@ export class Transactions {
             globalSecurity = new shared.Security(globalSecurity);
         }
         const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
             ...config?.headers,
