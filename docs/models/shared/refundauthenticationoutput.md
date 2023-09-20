@@ -1,0 +1,11 @@
+# RefundAuthenticationOutput
+
+The authentication object allows you to opt in to additional security features specific for refund
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      | Example                                                                                          |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `electronicCommerceIndicator`                                                                    | *string*                                                                                         | :heavy_minus_sign:                                                                               | Describes the Electronic Commerce Indicator used in cardholder authentication on a network token | 05                                                                                               |
+| `tokenAuthenticationResult`                                                                      | [TokenAuthenticationResult](../../models/shared/tokenauthenticationresult.md)                    | :heavy_minus_sign:                                                                               | Returned when more information about token authentication is received from the network           |                                                                                                  |

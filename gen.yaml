@@ -1,4 +1,9 @@
 configVersion: 1.0.0
+management:
+  docChecksum: 758ab7785c81417a144cec6fba0a3b89
+  docVersion: 2.0.52
+  speakeasyVersion: 1.88.0
+  generationVersion: 2.118.1
 generation:
   comments:
     disableComments: false
@@ -7,8 +12,13 @@ generation:
   sdkClassName: testingPayments
   singleTagPerOp: false
   tagNamespacingDisabled: false
+features:
+  typescript:
+    core: 2.87.3
+    globalServerURLs: 2.82.0
+    inputOutputModels: 2.81.1
 typescript:
-  version: 0.0.1
+  version: 0.1.0
   author: testing
   clientServerStatusCodesAsErrors: true
   maxMethodParams: 0
