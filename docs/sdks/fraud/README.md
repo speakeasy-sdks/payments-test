@@ -22,8 +22,7 @@ import { V2FraudCheckByIdGetResponse } from "testingPayments/dist/sdk/models/ope
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -65,8 +64,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -192,8 +190,7 @@ import { V2FraudCheckgetResponse } from "testingPayments/dist/sdk/models/operati
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 

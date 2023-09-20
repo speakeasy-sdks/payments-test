@@ -32,8 +32,7 @@ import { V2CaptureByIdGetResponse } from "testingPayments/dist/sdk/models/operat
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -74,8 +73,7 @@ import { V2CaptureGetResponse } from "testingPayments/dist/sdk/models/operations
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -134,8 +132,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -371,8 +368,7 @@ import { V2PaymentByIdGetResponse } from "testingPayments/dist/sdk/models/operat
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -412,8 +408,7 @@ import { V2PaymentGetResponse } from "testingPayments/dist/sdk/models/operations
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -455,8 +450,7 @@ import { CaptureMethod } from "testingPayments/dist/sdk/models/shared";
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -529,8 +523,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -805,8 +798,7 @@ import { V2RefundByIdGetResponse } from "testingPayments/dist/sdk/models/operati
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -846,8 +838,7 @@ import { V2RefundGetResponse } from "testingPayments/dist/sdk/models/operations"
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -900,8 +891,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -1080,8 +1070,7 @@ import { V2VerificationByIdGetResponse } from "testingPayments/dist/sdk/models/o
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -1122,8 +1111,7 @@ import { V2VerificationGetResponse } from "testingPayments/dist/sdk/models/opera
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -1182,8 +1170,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 

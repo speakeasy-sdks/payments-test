@@ -7,8 +7,7 @@ import { V2FraudCheckByIdGetResponse } from "testingPayments/dist/sdk/models/ope
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 

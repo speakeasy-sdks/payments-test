@@ -22,8 +22,7 @@ import { V2PaymentHealthGetResponse } from "testingPayments/dist/sdk/models/oper
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -58,8 +57,7 @@ import { V2RefundHealthGetResponse } from "testingPayments/dist/sdk/models/opera
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
@@ -94,8 +92,7 @@ import { V2VerificationHealthGetResponse } from "testingPayments/dist/sdk/models
 
 const sdk = new TestingPayments({
   security: {
-    password: "",
-    username: "",
+    bearerAuth: "",
   },
 });
 
