@@ -137,10 +137,6 @@ src/sdk/models/errors/validationmessage.ts
 src/sdk/models/errors/information.ts
 src/sdk/models/errors/healthcheckresource.ts
 src/sdk/models/errors/index.ts
-docs/sdks/testingpayments/README.md
-docs/sdks/fraud/README.md
-docs/sdks/healthcheck/README.md
-docs/sdks/transactions/README.md
 USAGE.md
 docs/models/operations/v2fraudcheckbyidgetrequest.md
 docs/models/operations/v2fraudcheckbyidgetresponse.md
@@ -315,4 +311,8 @@ docs/models/errors/messages.md
 docs/models/errors/validationmessage.md
 docs/models/errors/information.md
 docs/models/errors/healthcheckresource.md
+docs/sdks/testingpayments/README.md
+docs/sdks/fraud/README.md
+docs/sdks/healthcheck/README.md
+docs/sdks/transactions/README.md
 .gitattributes

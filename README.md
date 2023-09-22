@@ -24,8 +24,6 @@ yarn add https://github.com/speakeasy-sdks/payments-test
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { TestingPayments } from "testingPayments";
 import { V2FraudCheckByIdGetResponse } from "testingPayments/dist/sdk/models/operations";
@@ -80,6 +78,32 @@ sdk.fraud.v2FraudCheckByIdGet({
 * [v2VerificationGet](docs/sdks/transactions/README.md#v2verificationget) - Get a specific verification transaction by request Id
 * [v2VerificationPost](docs/sdks/transactions/README.md#v2verificationpost) - Verify a payment instrument
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Pagination -->
+# Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `next` method that can be called to pull down the next group of results. If the
+return value of `next` is `null`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+
+
+<!-- End Pagination -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 
