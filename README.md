@@ -50,19 +50,19 @@ sdk.fraud.v2FraudCheckByIdGet({
 ## Available Resources and Operations
 
 
-### [Fraud](docs/sdks/fraud/README.md)
+### [fraud](docs/sdks/fraud/README.md)
 
 * [v2FraudCheckByIdGet](docs/sdks/fraud/README.md#v2fraudcheckbyidget) - Retrieve fraud response
 * [v2FraudCheckPost](docs/sdks/fraud/README.md#v2fraudcheckpost) - Fraud check
 * [v2FraudCheckget](docs/sdks/fraud/README.md#v2fraudcheckget) - Retrieve fraud response
 
-### [HealthCheck](docs/sdks/healthcheck/README.md)
+### [healthCheck](docs/sdks/healthcheck/README.md)
 
 * [v2PaymentHealthGet](docs/sdks/healthcheck/README.md#v2paymenthealthget) - Health check for payments
 * [v2RefundHealthGet](docs/sdks/healthcheck/README.md#v2refundhealthget) - Health check for refunds
 * [v2VerificationHealthGet](docs/sdks/healthcheck/README.md#v2verificationhealthget) - Health check for verifications
 
-### [Transactions](docs/sdks/transactions/README.md)
+### [transactions](docs/sdks/transactions/README.md)
 
 * [v2CaptureByIdGet](docs/sdks/transactions/README.md#v2capturebyidget) - Retrieve Payment Details by transaction Id
 * [v2CaptureGet](docs/sdks/transactions/README.md#v2captureget) - Retrieve Payment Details
