@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { RFCDate } from "../../types";
 import { ProcessorStatus } from "./processorstatus";
-import { Expose, Transform } from "class-transformer";
+import { Expose, Transform, Type } from "class-transformer";
 
 /**
  * Indicates the bank issuing the Boleto
@@ -45,6 +45,7 @@ export class BoletoInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "dueDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     dueDate: RFCDate;
 
@@ -53,6 +54,7 @@ export class BoletoInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "expiryDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     expiryDate?: RFCDate;
 
@@ -122,6 +124,7 @@ export class Boleto extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "dueDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     dueDate: RFCDate;
 
@@ -130,6 +133,7 @@ export class Boleto extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "expiryDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     expiryDate?: RFCDate;
 

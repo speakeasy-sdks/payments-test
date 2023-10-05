@@ -25,6 +25,7 @@ export class AccountHolderInformationInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "birthDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     birthDate?: RFCDate;
 

@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { RFCDate } from "../../types";
 import { RecurringSequence } from "./recurringsequence";
-import { Expose, Transform } from "class-transformer";
+import { Expose, Transform, Type } from "class-transformer";
 
 /**
  * Recurring Payment Object
@@ -23,6 +23,7 @@ export class Recurring extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "paymentAgreementExpiryDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     paymentAgreementExpiryDate?: RFCDate;
 

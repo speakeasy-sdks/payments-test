@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { RFCDate } from "../../types";
 import { AccountType } from "./accounttype";
 import { PaymentType } from "./paymenttype";
-import { Expose, Transform } from "class-transformer";
+import { Expose, Transform, Type } from "class-transformer";
 
 /**
  * Indicates the type of ACH verification being performed.
@@ -94,6 +94,7 @@ export class VerificationACHInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "individualBirthDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     individualBirthDate?: RFCDate;
 
@@ -163,6 +164,7 @@ export class VerificationACHOutput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "individualBirthDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     individualBirthDate?: RFCDate;
 

@@ -32,6 +32,7 @@ export class AccountHolder extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "consumerIdCreationDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     consumerIdCreationDate?: RFCDate;
 
@@ -89,6 +90,7 @@ export class AccountHolderOutput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "consumerIdCreationDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     consumerIdCreationDate?: RFCDate;
 }
