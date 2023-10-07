@@ -19,19 +19,20 @@ Health check for payments
 
 ```typescript
 import { TestingPayments } from "testingPayments";
-import { V2PaymentHealthGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new TestingPayments({
+    security: {
+      bearerAuth: "",
+    },
+  });
 
-sdk.healthCheck.v2PaymentHealthGet().then((res: V2PaymentHealthGetResponse) => {
+  const res = await sdk.healthCheck.v2PaymentHealthGet();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -54,19 +55,20 @@ Health check for refunds
 
 ```typescript
 import { TestingPayments } from "testingPayments";
-import { V2RefundHealthGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new TestingPayments({
+    security: {
+      bearerAuth: "",
+    },
+  });
 
-sdk.healthCheck.v2RefundHealthGet().then((res: V2RefundHealthGetResponse) => {
+  const res = await sdk.healthCheck.v2RefundHealthGet();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -89,19 +91,20 @@ Health check for verifications
 
 ```typescript
 import { TestingPayments } from "testingPayments";
-import { V2VerificationHealthGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new TestingPayments({
+    security: {
+      bearerAuth: "",
+    },
+  });
 
-sdk.healthCheck.v2VerificationHealthGet().then((res: V2VerificationHealthGetResponse) => {
+  const res = await sdk.healthCheck.v2VerificationHealthGet();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

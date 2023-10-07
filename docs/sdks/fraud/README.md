@@ -19,23 +19,24 @@ Retrieve fraud score of a payment instrument with cardholder information without
 
 ```typescript
 import { TestingPayments } from "testingPayments";
-import { V2FraudCheckByIdGetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new TestingPayments({
+    security: {
+      bearerAuth: "",
+    },
+  });
 
-sdk.fraud.v2FraudCheckByIdGet({
-  id: "12cc0270-7bed-11e9-a188-1763956dd7f6",
-  merchantId: "991234567890",
-  minorVersion: "1",
-}).then((res: V2FraudCheckByIdGetResponse) => {
+  const res = await sdk.fraud.v2FraudCheckByIdGet({
+    id: "12cc0270-7bed-11e9-a188-1763956dd7f6",
+    merchantId: "991234567890",
+    minorVersion: "1",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,60 +60,20 @@ Validate a payment instrument with cardholder information without placing a fund
 
 ```typescript
 import { TestingPayments } from "testingPayments";
-import { V2FraudCheckPostResponse } from "testingPayments/dist/sdk/models/operations";
 import { Currency } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
-const sdk = new TestingPayments({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new TestingPayments({
+    security: {
+      bearerAuth: "",
+    },
+  });
 
-sdk.fraud.v2FraudCheckPost({
-  fraudCheckRequestInput: {
-    accountHolder: {
-      billingAddress: {
-        city: "Nowhere",
-        countryCode: "USA",
-        line1: "123 Some Street",
-        line2: "Apartment 3b",
-        postalCode: "99999",
-        state: "FL",
-      },
-      birthDate: new RFCDate("2000-09-20"),
-      consumerIdCreationDate: "Polestar Reno",
-      deviceIPAddress: "almost",
-      driverLicenseNumber: "so Security",
-      email: "john.doe@email.xyz",
-      fullName: "Jane Doe",
-      phone: {
-        countryCode: 1,
-        phoneNumber: "Northeast till",
-      },
-      referenceId: "AB12345678",
-    },
-    amount: 1234,
-    currency: Currency.Ugx,
-    fraudScore: {
-      aNITelephoneNumber: "West plum Luxurious",
-      cardholderBrowserInformation: "seldom grass than",
-      fencibleItemAmount: 448183,
-      fraudCheckShoppingCart: "calculating Switzerland",
-      isFraudRuleReturn: false,
-      sessionId: "system weber",
-      websiteRootDomainName: "Producer Southeast",
-    },
-    merchant: {
-      merchantCategoryCode: "4819",
-      merchantLogoUrl: "weber",
-      merchantSoftware: {
-        companyName: "Payment Company",
-        productName: "Application Name",
-        version: "1.235",
-      },
-      softMerchant: {
-        address: {
+  const res = await sdk.fraud.v2FraudCheckPost({
+    fraudCheckRequestInput: {
+      accountHolder: {
+        billingAddress: {
           city: "Nowhere",
           countryCode: "USA",
           line1: "123 Some Street",
@@ -120,50 +81,70 @@ sdk.fraud.v2FraudCheckPost({
           postalCode: "99999",
           state: "FL",
         },
-        email: "Edna_Padberg@yahoo.com",
-        merchantPurchaseDescription: "Southeast East",
-        name: "Health pink Security",
-        phone: "1-472-456-0138",
-        url: "https://glum-worry.org",
+        birthDate: new RFCDate("2000-09-20"),
+        email: "john.doe@email.xyz",
+        fullName: "Jane Doe",
+        phone: {
+          countryCode: 1,
+          phoneNumber: "Polestar Reno",
+        },
+        referenceId: "AB12345678",
       },
-    },
-    paymentMethodType: {
-      card: {
-        accountNumber: "Loan relieved",
-        expiry: {
-          month: 5,
-          year: 2020,
+      amount: 1234,
+      currency: Currency.Xaf,
+      fraudScore: {},
+      merchant: {
+        merchantCategoryCode: "4819",
+        merchantSoftware: {
+          companyName: "Payment Company",
+          productName: "Application Name",
+          version: "1.235",
+        },
+        softMerchant: {
+          address: {
+            city: "Nowhere",
+            countryCode: "USA",
+            line1: "123 Some Street",
+            line2: "Apartment 3b",
+            postalCode: "99999",
+            state: "FL",
+          },
+        },
+      },
+      paymentMethodType: {
+        card: {
+          accountNumber: "Hamilton so Security",
+          expiry: {
+            month: 5,
+            year: 2020,
+          },
+        },
+      },
+      shipTo: {
+        fullName: "Jane Doe",
+        phone: {
+          countryCode: 1,
+          phoneNumber: "Northeast till",
+        },
+        shippingAddress: {
+          city: "Nowhere",
+          countryCode: "USA",
+          line1: "123 Some Street",
+          line2: "Apartment 3b",
+          postalCode: "99999",
+          state: "FL",
         },
       },
     },
-    shipTo: {
-      firstName: "Keaton",
-      fullName: "Jane Doe",
-      lastName: "Von",
-      middleName: "Corey",
-      phone: {
-        countryCode: 1,
-        phoneNumber: "Tungsten lavender payment",
-      },
-      shippingAddress: {
-        city: "Nowhere",
-        countryCode: "USA",
-        line1: "123 Some Street",
-        line2: "Apartment 3b",
-        postalCode: "99999",
-        state: "FL",
-      },
-      shippingDescription: "Ponce ah",
-    },
-  },
-  merchantId: "991234567890",
-  minorVersion: "1",
-  requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
-}).then((res: V2FraudCheckPostResponse) => {
+    merchantId: "991234567890",
+    minorVersion: "1",
+    requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -187,23 +168,24 @@ Retrieve fraud score of a payment instrument with cardholder information without
 
 ```typescript
 import { TestingPayments } from "testingPayments";
-import { V2FraudCheckgetResponse } from "testingPayments/dist/sdk/models/operations";
 
-const sdk = new TestingPayments({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new TestingPayments({
+    security: {
+      bearerAuth: "",
+    },
+  });
 
-sdk.fraud.v2FraudCheckget({
-  merchantId: "991234567890",
-  minorVersion: "1",
-  requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
-}).then((res: V2FraudCheckgetResponse) => {
+  const res = await sdk.fraud.v2FraudCheckget({
+    merchantId: "991234567890",
+    minorVersion: "1",
+    requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
