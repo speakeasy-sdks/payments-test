@@ -5,6 +5,7 @@
 export * from "./healthcheckresource";
 export * from "./information";
 export * from "./messages";
+export * from "./responsestatus";
 export * from "./validationmessage";
 
 export * from "./sdkerror";

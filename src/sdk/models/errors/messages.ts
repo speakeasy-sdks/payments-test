@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { Information } from "./information";
+import { ResponseStatus } from "./responsestatus";
 import { ValidationMessage } from "./validationmessage";
 import { classToPlain, Expose, Type } from "class-transformer";
 
@@ -39,7 +39,7 @@ export class Messages extends Error {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "responseStatus" })
-    responseStatus: shared.ResponseStatus;
+    responseStatus: ResponseStatus;
 
     /**
      * Information about errors occurred in transaction validation

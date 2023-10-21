@@ -86,12 +86,12 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
         fullName: "Jane Doe",
         phone: {
           countryCode: 1,
-          phoneNumber: "Polestar Reno",
+          phoneNumber: "string",
         },
         referenceId: "AB12345678",
       },
       amount: 1234,
-      currency: Currency.Xaf,
+      currency: Currency.Mur,
       fraudScore: {},
       merchant: {
         merchantCategoryCode: "4819",
@@ -113,7 +113,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
       },
       paymentMethodType: {
         card: {
-          accountNumber: "Hamilton so Security",
+          accountNumber: "string",
           expiry: {
             month: 5,
             year: 2020,
@@ -124,7 +124,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
         fullName: "Jane Doe",
         phone: {
           countryCode: 1,
-          phoneNumber: "Northeast till",
+          phoneNumber: "string",
         },
         shippingAddress: {
           city: "Nowhere",

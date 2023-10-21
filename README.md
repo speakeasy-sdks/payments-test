@@ -27,23 +27,24 @@ yarn add https://github.com/speakeasy-sdks/payments-test
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
-  const sdk = new TestingPayments({
-    security: {
-      bearerAuth: "",
-    },
-  });
+(async () => {
+    const sdk = new TestingPayments({
+        security: {
+            bearerAuth: "",
+        },
+    });
 
-  const res = await sdk.fraud.v2FraudCheckByIdGet({
-    id: "12cc0270-7bed-11e9-a188-1763956dd7f6",
-    merchantId: "991234567890",
-    minorVersion: "1",
-  });
+    const res = await sdk.fraud.v2FraudCheckByIdGet({
+        id: "12cc0270-7bed-11e9-a188-1763956dd7f6",
+        merchantId: "991234567890",
+        minorVersion: "1",
+    });
 
-  if (res.statusCode == 200) {
-    // handle response
-  }
+    if (res.statusCode == 200) {
+        // handle response
+    }
 })();
+
 ```
 <!-- End SDK Example Usage -->
 

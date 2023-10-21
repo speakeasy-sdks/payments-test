@@ -3,8 +3,16 @@
  */
 
 import { SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { classToPlain, Expose } from "class-transformer";
+
+/**
+ * General status of all resources
+ */
+export enum HealthCheckResourceStatus {
+    Pass = "PASS",
+    Fail = "FAIL",
+    Warn = "WARN",
+}
 
 /**
  * Contains health check information about a resource
@@ -15,7 +23,7 @@ export class HealthCheckResource extends Error {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "status" })
-    status?: shared.HealthCheckResourceStatus;
+    status?: HealthCheckResourceStatus;
 
     constructor(err?: HealthCheckResource) {
         super();

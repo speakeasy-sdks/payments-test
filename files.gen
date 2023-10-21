@@ -134,6 +134,7 @@ src/sdk/models/shared/security.ts
 src/sdk/models/shared/index.ts
 src/sdk/models/errors/messages.ts
 src/sdk/models/errors/validationmessage.ts
+src/sdk/models/errors/responsestatus.ts
 src/sdk/models/errors/information.ts
 src/sdk/models/errors/healthcheckresource.ts
 src/sdk/models/errors/index.ts
@@ -309,7 +310,9 @@ docs/models/shared/verificationinput.md
 docs/models/shared/security.md
 docs/models/errors/messages.md
 docs/models/errors/validationmessage.md
+docs/models/errors/responsestatus.md
 docs/models/errors/information.md
+docs/models/errors/healthcheckresourcestatus.md
 docs/models/errors/healthcheckresource.md
 docs/sdks/testingpayments/README.md
 docs/sdks/fraud/README.md

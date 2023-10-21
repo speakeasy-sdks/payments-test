@@ -156,11 +156,11 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
         fullName: "Jane Doe",
         mobile: {
           countryCode: 1,
-          phoneNumber: "Tesla Persistent",
+          phoneNumber: "string",
         },
         phone: {
           countryCode: 1,
-          phoneNumber: "generation Concrete",
+          phoneNumber: "string",
         },
         referenceId: "AB12345678",
       },
@@ -192,7 +192,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
       multiCapture: {},
       paymentMethodType: {
         card: {
-          accountNumber: "jovially pascal Potassium",
+          accountNumber: "string",
           accountUpdater: {
             requestAccountUpdater: true,
           },
@@ -212,7 +212,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
           },
           originalNetworkTransactionId: "1c4b1100-4017-11e9-b649-8de064224186",
           preferredPaymentNetworkNameList: [
-            PreferredPaymentNetworkName.StarPinless,
+            PreferredPaymentNetworkName.PulsePinless,
           ],
         },
       },
@@ -244,11 +244,11 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
         fullName: "Jane Doe",
         mobile: {
           countryCode: 1,
-          phoneNumber: "yellow Cobalt",
+          phoneNumber: "string",
         },
         phone: {
           countryCode: 1,
-          phoneNumber: "vortals",
+          phoneNumber: "string",
         },
         shippingAddress: {
           city: "Nowhere",
@@ -475,17 +475,17 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
         fullName: "Jane Doe",
         mobile: {
           countryCode: 1,
-          phoneNumber: "acidly Smart",
+          phoneNumber: "string",
         },
         phone: {
           countryCode: 1,
-          phoneNumber: "program Producer",
+          phoneNumber: "string",
         },
         referenceId: "AB12345678",
       },
       accountOnFile: AccountOnFile.NotStored,
       amount: 1234,
-      currency: Currency.Sbd,
+      currency: Currency.Lrd,
       initiatorType: InitiatorType.Cardholder,
       installment: {
         planId: "BANORTE_WITHOUT_INTEREST",
@@ -511,8 +511,8 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
       merchantOrderNumber: "X1234",
       paymentMethodType: {
         ach: {
-          accountNumber: "Highlands",
-          financialInstitutionRoutingNumber: "throughout API",
+          accountNumber: "string",
+          financialInstitutionRoutingNumber: "string",
         },
         applepay: {
           encryptedPaymentBundle: {
@@ -525,17 +525,17 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
         },
         boleto: {
           bankCode: BoletoBankCode.Jpm,
-          documentNumber: "Magnesium invoice driver",
+          documentNumber: "string",
           dueDate: new RFCDate("2020-09-20"),
           expiryDate: new RFCDate("2020-09-20"),
-          paidAmount: "digital",
+          paidAmount: "string",
           paidDate: "2018-12-21T09:30:15.987Z",
           ticketInstructions: "Pay to maturity",
           type: BoletoType.Bdp,
-          uniqueNumber: "Assistant Account bypass",
+          uniqueNumber: "string",
         },
         card: {
-          accountNumber: "Table Niger",
+          accountNumber: "string",
           accountUpdater: {
             requestAccountUpdater: true,
           },
@@ -555,7 +555,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
           },
           originalNetworkTransactionId: "1c4b1100-4017-11e9-b649-8de064224186",
           preferredPaymentNetworkNameList: [
-            PreferredPaymentNetworkName.AccelPinless,
+            PreferredPaymentNetworkName.StarPinless,
           ],
         },
         googlepay: {
@@ -596,11 +596,11 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
         fullName: "Jane Doe",
         mobile: {
           countryCode: 1,
-          phoneNumber: "experiences",
+          phoneNumber: "string",
         },
         phone: {
           countryCode: 1,
-          phoneNumber: "Handcrafted",
+          phoneNumber: "string",
         },
         shippingAddress: {
           city: "Nowhere",
@@ -767,11 +767,11 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
         fullName: "Jane Doe",
         mobile: {
           countryCode: 1,
-          phoneNumber: "Sharable",
+          phoneNumber: "string",
         },
         phone: {
           countryCode: 1,
-          phoneNumber: "SDD Midwest",
+          phoneNumber: "string",
         },
         referenceId: "AB12345678",
       },
@@ -799,11 +799,11 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
       merchantOrderNumber: "X1234",
       paymentMethodType: {
         ach: {
-          accountNumber: "Beauty Account",
-          financialInstitutionRoutingNumber: "Country",
+          accountNumber: "string",
+          financialInstitutionRoutingNumber: "string",
         },
         card: {
-          accountNumber: "male Unbranded payment",
+          accountNumber: "string",
           authentication: {
             electronicCommerceIndicator: "05",
           },
@@ -813,7 +813,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
           },
           originalNetworkTransactionId: "1c4b1100-4017-11e9-b649-8de064224186",
           preferredPaymentNetworkNameList: [
-            PreferredPaymentNetworkName.NycePinless,
+            PreferredPaymentNetworkName.StarPinless,
           ],
         },
         transactionReference: {
@@ -997,16 +997,16 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
         fullName: "Jane Doe",
         mobile: {
           countryCode: 1,
-          phoneNumber: "ack ADP World",
+          phoneNumber: "string",
         },
         phone: {
           countryCode: 1,
-          phoneNumber: "miserly Merced",
+          phoneNumber: "string",
         },
         referenceId: "AB12345678",
       },
       accountOnFile: AccountOnFile.NotStored,
-      currency: Currency.Dkk,
+      currency: Currency.Wst,
       initiatorType: InitiatorType.Cardholder,
       merchant: {
         merchantCategoryCode: "4819",
