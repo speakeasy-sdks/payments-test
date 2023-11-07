@@ -11,7 +11,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Codifies the justification why a transaction does not have to meet Strong Customer Authentication (SCA) requirements. SCA is a regulatory requirement to reduce fraud and make online payments more secure via two-factor authentication; an authentication based on the use of two or more elements categorized as knowledge (something only the user knows), possession (something only the user possesses) or inherence (something the user is).
  */
-export enum AuthenticationSCAExemptionReason {
+export enum SCAExemptionReason {
     TrustedMerchant = "TRUSTED_MERCHANT",
     SecureCorporatePayment = "SECURE_CORPORATE_PAYMENT",
     TransactionRiskAnalysis = "TRANSACTION_RISK_ANALYSIS",
@@ -24,47 +24,13 @@ export enum AuthenticationSCAExemptionReason {
 /**
  * The authentication object allows you to opt in to additional security features like 3-D Secure
  */
-export class AuthenticationInput extends SpeakeasyBase {
-    /**
-     * Codifies the justification why a transaction does not have to meet Strong Customer Authentication (SCA) requirements. SCA is a regulatory requirement to reduce fraud and make online payments more secure via two-factor authentication; an authentication based on the use of two or more elements categorized as knowledge (something only the user knows), possession (something only the user possesses) or inherence (something the user is).
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "SCAExemptionReason" })
-    scaExemptionReason?: AuthenticationSCAExemptionReason;
-
-    /**
-     * Describes the Electronic Commerce Indicator used in cardholder authentication on a network token
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "electronicCommerceIndicator" })
-    electronicCommerceIndicator?: string;
-
-    /**
-     * Contains information about payer authentication using 3-D Secure authentication
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "threeDS" })
-    @Type(() => ThreeDS)
-    threeDS?: ThreeDS;
-
-    /**
-     * Contains authentication value received from Payment Networks for network token transactions
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "tokenAuthenticationValue" })
-    tokenAuthenticationValue?: string;
-}
-
-/**
- * The authentication object allows you to opt in to additional security features like 3-D Secure
- */
 export class AuthenticationOutput extends SpeakeasyBase {
     /**
      * Codifies the justification why a transaction does not have to meet Strong Customer Authentication (SCA) requirements. SCA is a regulatory requirement to reduce fraud and make online payments more secure via two-factor authentication; an authentication based on the use of two or more elements categorized as knowledge (something only the user knows), possession (something only the user possesses) or inherence (something the user is).
      */
     @SpeakeasyMetadata()
     @Expose({ name: "SCAExemptionReason" })
-    scaExemptionReason?: AuthenticationSCAExemptionReason;
+    scaExemptionReason?: SCAExemptionReason;
 
     /**
      * Returned when more information about authentication is received from the  network
@@ -96,4 +62,38 @@ export class AuthenticationOutput extends SpeakeasyBase {
     @Expose({ name: "tokenAuthenticationResult" })
     @Type(() => TokenAuthenticationResult)
     tokenAuthenticationResult?: TokenAuthenticationResult;
+}
+
+/**
+ * The authentication object allows you to opt in to additional security features like 3-D Secure
+ */
+export class Authentication extends SpeakeasyBase {
+    /**
+     * Codifies the justification why a transaction does not have to meet Strong Customer Authentication (SCA) requirements. SCA is a regulatory requirement to reduce fraud and make online payments more secure via two-factor authentication; an authentication based on the use of two or more elements categorized as knowledge (something only the user knows), possession (something only the user possesses) or inherence (something the user is).
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "SCAExemptionReason" })
+    scaExemptionReason?: SCAExemptionReason;
+
+    /**
+     * Describes the Electronic Commerce Indicator used in cardholder authentication on a network token
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "electronicCommerceIndicator" })
+    electronicCommerceIndicator?: string;
+
+    /**
+     * Contains information about payer authentication using 3-D Secure authentication
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "threeDS" })
+    @Type(() => ThreeDS)
+    threeDS?: ThreeDS;
+
+    /**
+     * Contains authentication value received from Payment Networks for network token transactions
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "tokenAuthenticationValue" })
+    tokenAuthenticationValue?: string;
 }

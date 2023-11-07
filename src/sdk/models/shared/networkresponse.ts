@@ -10,7 +10,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Indicates if address provided matches the billing address
  */
-export enum NetworkResponseAddressVerificationResult {
+export enum AddressVerificationResult {
     AddressMatch = "ADDRESS_MATCH",
     AddressPostalcodeMatch = "ADDRESS_POSTALCODE_MATCH",
     NameAddressMatch = "NAME_ADDRESS_MATCH",
@@ -28,7 +28,7 @@ export enum NetworkResponseAddressVerificationResult {
 /**
  * Indicates if the card verification values (CVV/CV2) matches
  */
-export enum NetworkResponseCardVerificationResult {
+export enum CardVerificationResult {
     Match = "MATCH",
     NotPresent = "NOT_PRESENT",
     NotProcessed = "NOT_PROCESSED",
@@ -39,7 +39,7 @@ export enum NetworkResponseCardVerificationResult {
 /**
  * Provides the textual detail information of the issuer's authorization response code to a merchant when verifying the cardholder's email address to help authenticate transactions and prevent fraud. This is Amex only field.
  */
-export enum NetworkResponseEmailVerificationResult {
+export enum EmailVerificationResult {
     Match = "MATCH",
     NoMatch = "NO_MATCH",
     NotVerified = "NOT_VERIFIED",
@@ -50,7 +50,7 @@ export enum NetworkResponseEmailVerificationResult {
 /**
  * Codifies the issuer's authorization response code to a merchant when verifying the cardholder's billing telephone number to help authenticate transactions and prevent fraud. This is Amex only field.
  */
-export enum NetworkResponsePhoneVerificationResult {
+export enum PhoneVerificationResult {
     Match = "MATCH",
     NoMatch = "NO_MATCH",
     NotVerified = "NOT_VERIFIED",
@@ -75,7 +75,7 @@ export class NetworkResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "addressVerificationResult" })
-    addressVerificationResult?: NetworkResponseAddressVerificationResult;
+    addressVerificationResult?: AddressVerificationResult;
 
     /**
      * Codifies authentication of the address related to the payment card account at the transaction location during the authorization phase of a payment transaction(e.g. Z = zip code match, A = address match).
@@ -96,7 +96,7 @@ export class NetworkResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "cardVerificationResult" })
-    cardVerificationResult?: NetworkResponseCardVerificationResult;
+    cardVerificationResult?: CardVerificationResult;
 
     /**
      * Codifies the results of the cardholder authentication match test within the processor.  Authentication test is based on whether the MasterCard Card Verification Character (CVC) or the Visa Card Verification Value (CVV) presented with the transaction matches what the Firm has on file for the card account (e.g., M = CVV2 matched, N = CVV2 did not match).
@@ -117,7 +117,7 @@ export class NetworkResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "emailVerificationResult" })
-    emailVerificationResult?: NetworkResponseEmailVerificationResult;
+    emailVerificationResult?: EmailVerificationResult;
 
     /**
      * Codifies the issuer's authorization response code to a merchant when verifying the cardholder's email address to help authenticate transactions and prevent fraud.This is Amex only field.
@@ -160,7 +160,7 @@ export class NetworkResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "phoneVerificationResult" })
-    phoneVerificationResult?: NetworkResponsePhoneVerificationResult;
+    phoneVerificationResult?: PhoneVerificationResult;
 
     /**
      * Provides the textual detail information of the issuer's authorization response code to a merchant when verifying the cardholder's billing telephone number to help authenticate transactions and prevent fraud.This is Amex only field.

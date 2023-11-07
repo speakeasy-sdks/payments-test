@@ -7,16 +7,16 @@ import { AccountHolder } from "./accountholder";
 import { AccountOnFile } from "./accountonfile";
 import { Currency } from "./currency";
 import { InitiatorType } from "./initiatortype";
-import { MerchantInput } from "./merchant";
+import { Merchant } from "./merchant";
 import { RecurringSequence } from "./recurringsequence";
 import { TransactionRoutingOverrideList } from "./transactionroutingoverridelist";
-import { VerificationPaymentMethodTypeInput } from "./verificationpaymentmethodtype";
+import { VerificationPaymentMethodType } from "./verificationpaymentmethodtype";
 import { Expose, Type } from "class-transformer";
 
 /**
  * Input verification information for API call
  */
-export class VerificationInput extends SpeakeasyBase {
+export class Verification extends SpeakeasyBase {
     /**
      * Card owner properties
      */
@@ -51,8 +51,8 @@ export class VerificationInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "merchant" })
-    @Type(() => MerchantInput)
-    merchant: MerchantInput;
+    @Type(() => Merchant)
+    merchant: Merchant;
 
     /**
      * A unique merchant assigned identifier for the confirmation of goods and/or services purchased. The merchant order provides the merchant a reference to the prices, quantity and description of goods and/or services to be delivered for all transactions included in the sale.
@@ -66,8 +66,8 @@ export class VerificationInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "paymentMethodType" })
-    @Type(() => VerificationPaymentMethodTypeInput)
-    paymentMethodType: VerificationPaymentMethodTypeInput;
+    @Type(() => VerificationPaymentMethodType)
+    paymentMethodType: VerificationPaymentMethodType;
 
     /**
      * Codifies the point in the recurring transaction by the consumer to the merchant for products or services.

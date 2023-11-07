@@ -3,18 +3,18 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { FraudCardInput } from "./fraudcard";
+import { FraudCard } from "./fraudcard";
 import { Expose, Type } from "class-transformer";
 
 /**
  * Object with information for Payment Method Type for  Fraud Check
  */
-export class FraudCheckPaymentMethodTypeInput extends SpeakeasyBase {
+export class FraudCheckPaymentMethodType extends SpeakeasyBase {
     /**
      * Card payment instrument for fraud checking
      */
     @SpeakeasyMetadata()
     @Expose({ name: "card" })
-    @Type(() => FraudCardInput)
-    card?: FraudCardInput;
+    @Type(() => FraudCard)
+    card?: FraudCard;
 }

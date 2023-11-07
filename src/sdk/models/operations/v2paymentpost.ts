@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class V2PaymentPostRequest extends SpeakeasyBase {
@@ -23,7 +23,7 @@ export class V2PaymentPostRequest extends SpeakeasyBase {
      * Payment request information
      */
     @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-    paymentInput: shared.PaymentInput;
+    payment: shared.Payment;
 
     /**
      * Merchant identifier for the request. The value must be unique.
@@ -55,5 +55,5 @@ export class V2PaymentPostResponse extends SpeakeasyBase {
      * Success
      */
     @SpeakeasyMetadata()
-    paymentResponse?: shared.PaymentResponseOutput;
+    paymentResponse?: shared.PaymentResponse;
 }

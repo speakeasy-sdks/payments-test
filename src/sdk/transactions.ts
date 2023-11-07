@@ -3,9 +3,9 @@
  */
 
 import * as utils from "../internal/utils";
-import * as errors from "./models/errors";
-import * as operations from "./models/operations";
-import * as shared from "./models/shared";
+import * as errors from "../sdk/models/errors";
+import * as operations from "../sdk/models/operations";
+import * as shared from "../sdk/models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
@@ -83,7 +83,7 @@ export class Transactions {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.paymentResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.PaymentResponseOutput
+                        shared.PaymentResponse
                     );
                 } else {
                     throw new errors.SDKError(
@@ -185,7 +185,7 @@ export class Transactions {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.paymentResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.PaymentResponseOutput
+                        shared.PaymentResponse
                     );
                 } else {
                     throw new errors.SDKError(
@@ -246,11 +246,7 @@ export class Transactions {
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
-            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(
-                req,
-                "captureRequestInput",
-                "json"
-            );
+            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "captureRequest", "json");
         } catch (e: unknown) {
             if (e instanceof Error) {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -303,7 +299,7 @@ export class Transactions {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.paymentResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.PaymentResponseOutput
+                        shared.PaymentResponse
                     );
                 } else {
                     throw new errors.SDKError(
@@ -404,7 +400,7 @@ export class Transactions {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.paymentResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.PaymentResponseOutput
+                        shared.PaymentResponse
                     );
                 } else {
                     throw new errors.SDKError(
@@ -506,7 +502,7 @@ export class Transactions {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.paymentResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.PaymentResponseOutput
+                        shared.PaymentResponse
                     );
                 } else {
                     throw new errors.SDKError(
@@ -620,7 +616,7 @@ export class Transactions {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.paymentResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.PaymentResponseOutput
+                        shared.PaymentResponse
                     );
                 } else {
                     throw new errors.SDKError(
@@ -681,7 +677,7 @@ export class Transactions {
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
-            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "paymentInput", "json");
+            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "payment", "json");
         } catch (e: unknown) {
             if (e instanceof Error) {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -734,7 +730,7 @@ export class Transactions {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.paymentResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.PaymentResponseOutput
+                        shared.PaymentResponse
                     );
                 } else {
                     throw new errors.SDKError(
@@ -835,7 +831,7 @@ export class Transactions {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.refundResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.RefundResponseOutput
+                        shared.RefundResponse
                     );
                 } else {
                     throw new errors.SDKError(
@@ -937,7 +933,7 @@ export class Transactions {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.refundResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.RefundResponseOutput
+                        shared.RefundResponse
                     );
                 } else {
                     throw new errors.SDKError(
@@ -998,7 +994,7 @@ export class Transactions {
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
-            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "refundInput", "json");
+            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "refund", "json");
         } catch (e: unknown) {
             if (e instanceof Error) {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -1051,7 +1047,7 @@ export class Transactions {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.refundResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.RefundResponseOutput
+                        shared.RefundResponse
                     );
                 } else {
                     throw new errors.SDKError(
@@ -1153,7 +1149,7 @@ export class Transactions {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.verificationResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.VerificationResponseOutput
+                        shared.VerificationResponse
                     );
                 } else {
                     throw new errors.SDKError(
@@ -1255,7 +1251,7 @@ export class Transactions {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.verificationResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.VerificationResponseOutput
+                        shared.VerificationResponse
                     );
                 } else {
                     throw new errors.SDKError(
@@ -1316,11 +1312,7 @@ export class Transactions {
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
-            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(
-                req,
-                "verificationInput",
-                "json"
-            );
+            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "verification", "json");
         } catch (e: unknown) {
             if (e instanceof Error) {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -1374,7 +1366,7 @@ export class Transactions {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.verificationResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.VerificationResponseOutput
+                        shared.VerificationResponse
                     );
                 } else {
                     throw new errors.SDKError(

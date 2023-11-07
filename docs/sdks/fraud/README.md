@@ -1,5 +1,5 @@
 # Fraud
-(*fraud*)
+(*.fraud*)
 
 ## Overview
 
@@ -32,6 +32,7 @@ import { TestingPayments } from "testingPayments";
     merchantId: "991234567890",
     minorVersion: "1",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -71,7 +72,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
   });
 
   const res = await sdk.fraud.v2FraudCheckPost({
-    fraudCheckRequestInput: {
+    fraudCheckRequest: {
       accountHolder: {
         billingAddress: {
           city: "Nowhere",
@@ -141,6 +142,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -181,6 +183,7 @@ import { TestingPayments } from "testingPayments";
     minorVersion: "1",
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

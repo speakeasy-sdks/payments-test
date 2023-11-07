@@ -8,7 +8,7 @@ import { Expose } from "class-transformer";
 /**
  * Codifies the type of transaction approval sought by a merchant such as a pre-authorization, final authorization, or undetermined.
  */
-export enum PaymentAuthAuthorizationType {
+export enum AuthorizationType {
     Initial = "INITIAL",
     Reauth = "REAUTH",
     Incremental = "INCREMENTAL",
@@ -37,7 +37,7 @@ export class PaymentAuth extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "authorizationType" })
-    authorizationType?: PaymentAuthAuthorizationType;
+    authorizationType?: AuthorizationType;
 
     /**
      * Codifies the point in the payment transaction flow of the transaction. For example, a typical transaction is authorized then captured for clearing and settlement; closed is when the transaction is ready for clearing and completed when the transaction is sent to the payment network for clearing.

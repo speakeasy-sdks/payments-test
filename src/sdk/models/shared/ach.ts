@@ -10,7 +10,7 @@ import { Expose } from "class-transformer";
 /**
  * Object for ACH (Automated Clearing House) payment method which occurs whenever someone instructs the ACH network to ?push? money from their account to someone else's. This is mostly used in USA.
  */
-export class AchInput extends SpeakeasyBase {
+export class Ach extends SpeakeasyBase {
     /**
      * Identifies a unique occurrence of a payment account.
      */

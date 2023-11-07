@@ -3,21 +3,21 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { ProcessorStatus } from "./processorstatus";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
  * Indicates the bank issuing the Boleto
  */
-export enum BoletoBankCode {
+export enum BankCode {
     Jpm = "JPM",
 }
 
 /**
  * Boleto type of Duplicata Mercantil or Boleto de Proposta
  */
-export enum BoletoType {
+export enum TypeT {
     Dm = "DM",
     Bdp = "BDP",
 }
@@ -31,7 +31,7 @@ export class BoletoInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "bankCode" })
-    bankCode: BoletoBankCode;
+    bankCode: BankCode;
 
     /**
      * Ticket identifier
@@ -84,7 +84,7 @@ export class BoletoInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type: BoletoType;
+    type: TypeT;
 
     /**
      * Number that uniquely identifies a Boleto for an account
@@ -103,7 +103,7 @@ export class Boleto extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "bankCode" })
-    bankCode: BoletoBankCode;
+    bankCode: BankCode;
 
     /**
      * A reference to a web resource on the internet specifying its location on a computer network and a mechanism for retrieving.  In this context, this is the URL provided by merchant for the barcode. Customer can complete the transaction by paying the transaction amount using barcode from the link.
@@ -191,7 +191,7 @@ export class Boleto extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type: BoletoType;
+    type: TypeT;
 
     /**
      * Number that uniquely identifies a Boleto for an account

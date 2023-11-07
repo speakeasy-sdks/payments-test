@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { PanExpiryOutput } from "./panexpiry";
+import { PanExpiry } from "./panexpiry";
 import { Expose, Type } from "class-transformer";
 
 /**
  * Contains response information related to account updater request
  */
-export class AccountUpdaterInput extends SpeakeasyBase {
+export class AccountUpdater extends SpeakeasyBase {
     /**
      * Enrolled merchants may request real-time Account Updater service by indicating TRUE for eligible recurring or stored transactions and bypass service by indicating FALSE.
      */
@@ -21,7 +21,7 @@ export class AccountUpdaterInput extends SpeakeasyBase {
 /**
  * Status of account updater request received from the network
  */
-export enum AccountUpdaterAccountUpdaterResponse {
+export enum AccountUpdaterResponse {
     NewAccount = "NEW_ACCOUNT",
     NewExpiry = "NEW_EXPIRY",
     NewAccountAndExpiry = "NEW_ACCOUNT_AND_EXPIRY",
@@ -66,13 +66,13 @@ export class AccountUpdaterOutput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "accountUpdaterResponse" })
-    accountUpdaterResponse?: AccountUpdaterAccountUpdaterResponse;
+    accountUpdaterResponse?: AccountUpdaterResponse;
 
     /**
      * Contains expiry for masked PAN if received from network
      */
     @SpeakeasyMetadata()
     @Expose({ name: "newAccountExpiry" })
-    @Type(() => PanExpiryOutput)
-    newAccountExpiry?: PanExpiryOutput;
+    @Type(() => PanExpiry)
+    newAccountExpiry?: PanExpiry;
 }

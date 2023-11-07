@@ -8,7 +8,7 @@ import { Expose } from "class-transformer";
 /**
  * Contains response information related to Account Updater request
  */
-export enum NetworkResponseAccountUpdaterAccountStatus {
+export enum AccountStatus {
     A = "A",
     C = "C",
     E = "E",
@@ -24,7 +24,7 @@ export class NetworkResponseAccountUpdater extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "accountStatus" })
-    accountStatus?: NetworkResponseAccountUpdaterAccountStatus;
+    accountStatus?: AccountStatus;
 
     /**
      * Network provided error or reason code

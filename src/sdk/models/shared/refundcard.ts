@@ -12,7 +12,7 @@ import { MerchantSalesChannelName } from "./merchantsaleschannelname";
 import { NetworkResponse } from "./networkresponse";
 import { PaymentToken } from "./paymenttoken";
 import { PreferredPaymentNetworkName } from "./preferredpaymentnetworkname";
-import { RefundAuthenticationInput, RefundAuthenticationOutput } from "./refundauthentication";
+import { RefundAuthentication, RefundAuthenticationOutput } from "./refundauthentication";
 import { Expose, Type } from "class-transformer";
 
 /**
@@ -26,7 +26,7 @@ export enum RefundCardWalletProvider {
 /**
  * Card payment instrument for refund
  */
-export class RefundCardInput extends SpeakeasyBase {
+export class RefundCard extends SpeakeasyBase {
     /**
      * Identifies a unique occurrence of a payment account.
      */
@@ -39,8 +39,8 @@ export class RefundCardInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "authentication" })
-    @Type(() => RefundAuthenticationInput)
-    authentication?: RefundAuthenticationInput;
+    @Type(() => RefundAuthentication)
+    authentication?: RefundAuthentication;
 
     /**
      * Expiration date

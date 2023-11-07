@@ -9,7 +9,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * The authentication object allows you to opt in to additional security features specific for refund
  */
-export class RefundAuthenticationInput extends SpeakeasyBase {
+export class RefundAuthentication extends SpeakeasyBase {
     /**
      * Describes the Electronic Commerce Indicator used in cardholder authentication on a network token
      */

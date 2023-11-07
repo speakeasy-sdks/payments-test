@@ -9,9 +9,9 @@ import { CaptureMethod } from "./capturemethod";
 import { Currency } from "./currency";
 import { InitiatorType } from "./initiatortype";
 import { Installment } from "./installment";
-import { MerchantInput } from "./merchant";
+import { Merchant } from "./merchant";
 import { MultiCapture } from "./multicapture";
-import { MultiCapturePaymentMethodTypeInput } from "./multicapturepaymentmethodtype";
+import { MultiCapturePaymentMethodType } from "./multicapturepaymentmethodtype";
 import { PartialAuthorizationSupport } from "./partialauthorizationsupport";
 import { Recurring } from "./recurring";
 import { RetailAddenda } from "./retailaddenda";
@@ -22,7 +22,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Request information for capture a payment
  */
-export class CaptureRequestInput extends SpeakeasyBase {
+export class CaptureRequest extends SpeakeasyBase {
     /**
      * Card owner properties
      */
@@ -86,8 +86,8 @@ export class CaptureRequestInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "merchant" })
-    @Type(() => MerchantInput)
-    merchant?: MerchantInput;
+    @Type(() => Merchant)
+    merchant?: Merchant;
 
     /**
      * A unique merchant assigned identifier for the confirmation of goods and/or services purchased. The merchant order provides the merchant a reference to the prices, quantity and description of goods and/or services to be delivered for all transactions included in the sale.
@@ -123,8 +123,8 @@ export class CaptureRequestInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "paymentMethodType" })
-    @Type(() => MultiCapturePaymentMethodTypeInput)
-    paymentMethodType?: MultiCapturePaymentMethodTypeInput;
+    @Type(() => MultiCapturePaymentMethodType)
+    paymentMethodType?: MultiCapturePaymentMethodType;
 
     /**
      * Identifies a unique occurrence of an payment processing request from merchant that is associated with a purchase of goods and/or services. A payment request consist of authorization, captures and refunds.

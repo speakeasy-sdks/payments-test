@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { AccountUpdaterInput, AccountUpdaterOutput } from "./accountupdater";
-import { AuthenticationInput, AuthenticationOutput } from "./authentication";
+import { AccountUpdater, AccountUpdaterOutput } from "./accountupdater";
+import { Authentication, AuthenticationOutput } from "./authentication";
 import { CardType } from "./cardtype";
 import { CardTypeIndicators } from "./cardtypeindicators";
 import { CardTypeName } from "./cardtypename";
@@ -19,7 +19,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Codifies the type of payment method account number used for the payment transaction.
  */
-export enum CardAccountNumberType {
+export enum AccountNumberType {
     Pan = "PAN",
     NetworkToken = "NETWORK_TOKEN",
     DeviceToken = "DEVICE_TOKEN",
@@ -31,7 +31,7 @@ export enum CardAccountNumberType {
 /**
  * Identifies the organization who manages the e-wallet for a consumer. The actual e-wallet management responsibilities may include hosting, accessing, communicating, and/or updating all or some of the customer data associated with the e-wallet.  An E-wallet is an application that is created on the mobile device to interact with the Point of Sale (POS) device as a catalyst for a transaction. This value may be sent to the Firm (as in Visa Tokenization) or created by the Firm.
  */
-export enum CardWalletProvider {
+export enum WalletProvider {
     ApplePay = "APPLE_PAY",
     GooglePay = "GOOGLE_PAY",
 }
@@ -39,7 +39,7 @@ export enum CardWalletProvider {
 /**
  * Card payment instrument
  */
-export class CardInput extends SpeakeasyBase {
+export class Card extends SpeakeasyBase {
     /**
      * Identifies a unique occurrence of a payment account.
      */
@@ -52,23 +52,23 @@ export class CardInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "accountNumberType" })
-    accountNumberType?: CardAccountNumberType;
+    accountNumberType?: AccountNumberType;
 
     /**
      * Contains response information related to account updater request
      */
     @SpeakeasyMetadata()
     @Expose({ name: "accountUpdater" })
-    @Type(() => AccountUpdaterInput)
-    accountUpdater?: AccountUpdaterInput;
+    @Type(() => AccountUpdater)
+    accountUpdater?: AccountUpdater;
 
     /**
      * The authentication object allows you to opt in to additional security features like 3-D Secure
      */
     @SpeakeasyMetadata()
     @Expose({ name: "authentication" })
-    @Type(() => AuthenticationInput)
-    authentication?: AuthenticationInput;
+    @Type(() => Authentication)
+    authentication?: Authentication;
 
     /**
      * Card verification value (CVV/CV2)
@@ -132,7 +132,7 @@ export class CardInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "walletProvider" })
-    walletProvider?: CardWalletProvider;
+    walletProvider?: WalletProvider;
 }
 
 /**
@@ -144,7 +144,7 @@ export class CardOutput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "accountNumberType" })
-    accountNumberType?: CardAccountNumberType;
+    accountNumberType?: AccountNumberType;
 
     /**
      * Contains response information related to account updater request
@@ -254,5 +254,5 @@ export class CardOutput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "walletProvider" })
-    walletProvider?: CardWalletProvider;
+    walletProvider?: WalletProvider;
 }

@@ -3,10 +3,24 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { Address } from "./address";
 import { Phone } from "./phone";
 import { Expose, Transform, Type } from "class-transformer";
+
+/**
+ * Card owner properties
+ */
+export class AccountHolderOutput extends SpeakeasyBase {
+    /**
+     * Designates the century, year, month and day that a merchant's customer profile has been first defined.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "consumerIdCreationDate" })
+    @Type(() => String)
+    @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
+    consumerIdCreationDate?: RFCDate;
+}
 
 /**
  * Card owner properties
@@ -79,18 +93,4 @@ export class AccountHolder extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "referenceId" })
     referenceId?: string;
-}
-
-/**
- * Card owner properties
- */
-export class AccountHolderOutput extends SpeakeasyBase {
-    /**
-     * Designates the century, year, month and day that a merchant's customer profile has been first defined.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "consumerIdCreationDate" })
-    @Type(() => String)
-    @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
-    consumerIdCreationDate?: RFCDate;
 }

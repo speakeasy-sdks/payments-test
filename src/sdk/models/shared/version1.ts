@@ -8,7 +8,7 @@ import { Expose } from "class-transformer";
 /**
  * Contains value returned in the transaction status field of the Payer Authentication Response (PARes) message from the card Issuer's Access Control Server (ACS). Y=Authentication successful ; N=Authentication failed ; U=Authentication unavailable ; A=Attempted authentication
  */
-export enum Version1ThreeDSPAResStatus {
+export enum ThreeDSPAResStatus {
     Y = "Y",
     N = "N",
     U = "U",
@@ -18,7 +18,7 @@ export enum Version1ThreeDSPAResStatus {
 /**
  * Contains value returned in the 'enrolled' field of the Verify Enrollment Response (VERes) message from the card scheme's Directory Server. Y=Authentication successful;  N=Authentication failed; U=Authentication unavailable;  A=Attempted authentication
  */
-export enum Version1ThreeDSVEResEnrolled {
+export enum ThreeDSVEResEnrolled {
     Y = "Y",
     N = "N",
     U = "U",
@@ -34,12 +34,12 @@ export class Version1 extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "threeDSPAResStatus" })
-    threeDSPAResStatus?: Version1ThreeDSPAResStatus;
+    threeDSPAResStatus?: ThreeDSPAResStatus;
 
     /**
      * Contains value returned in the 'enrolled' field of the Verify Enrollment Response (VERes) message from the card scheme's Directory Server. Y=Authentication successful;  N=Authentication failed; U=Authentication unavailable;  A=Attempted authentication
      */
     @SpeakeasyMetadata()
     @Expose({ name: "threeDSVEResEnrolled" })
-    threeDSVEResEnrolled?: Version1ThreeDSVEResEnrolled;
+    threeDSVEResEnrolled?: ThreeDSVEResEnrolled;
 }

@@ -8,7 +8,7 @@ import { Expose } from "class-transformer";
 /**
  * Source Account Information
  */
-export class SourceAccountInformationOutput extends SpeakeasyBase {
+export class SourceAccountInformation extends SpeakeasyBase {
     /**
      * The label given to a financial institution authorized by a government to accept deposits, make loans, pay interest, clear checks, and provide other financial services to its customers.
      */

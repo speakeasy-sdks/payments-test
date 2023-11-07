@@ -3,30 +3,30 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { AchInput, AchOutput } from "./ach";
-import { RefundCardInput, RefundCardOutput } from "./refundcard";
+import { Ach, AchOutput } from "./ach";
+import { RefundCard, RefundCardOutput } from "./refundcard";
 import { TransactionReference } from "./transactionreference";
 import { Expose, Type } from "class-transformer";
 
 /**
  * Object with one of the payment method type applicable for refund processing
  */
-export class RefundPaymentMethodTypeInput extends SpeakeasyBase {
+export class RefundPaymentMethodType extends SpeakeasyBase {
     /**
      * Object for ACH (Automated Clearing House) payment method which occurs whenever someone instructs the ACH network to ?push? money from their account to someone else's. This is mostly used in USA.
      */
     @SpeakeasyMetadata()
     @Expose({ name: "ach" })
-    @Type(() => AchInput)
-    ach?: AchInput;
+    @Type(() => Ach)
+    ach?: Ach;
 
     /**
      * Card payment instrument for refund
      */
     @SpeakeasyMetadata()
     @Expose({ name: "card" })
-    @Type(() => RefundCardInput)
-    card?: RefundCardInput;
+    @Type(() => RefundCard)
+    card?: RefundCard;
 
     /**
      * Object for refund transaction reference

@@ -11,7 +11,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Codifies the point in the payment processing request flow from merchant. A payment request consist of authorization, captures and refunds.  Valid Values are : PENDING, OPEN, CLOSED, CANCELLED
  */
-export enum PaymentRequestPaymentRequestStatus {
+export enum PaymentRequestStatus {
     Pending = "PENDING",
     Open = "OPEN",
     Closed = "CLOSED",
@@ -50,7 +50,7 @@ export class PaymentRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "paymentRequestStatus" })
-    paymentRequestStatus?: PaymentRequestPaymentRequestStatus;
+    paymentRequestStatus?: PaymentRequestStatus;
 
     /**
      * List of payment refund information

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class V2RefundGetRequest extends SpeakeasyBase {
@@ -55,5 +55,5 @@ export class V2RefundGetResponse extends SpeakeasyBase {
      * Success
      */
     @SpeakeasyMetadata()
-    refundResponse?: shared.RefundResponseOutput;
+    refundResponse?: shared.RefundResponse;
 }

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { Address } from "./address";
 import { Phone } from "./phone";
 import { Expose, Transform, Type } from "class-transformer";
@@ -11,7 +11,7 @@ import { Expose, Transform, Type } from "class-transformer";
 /**
  * Information about the card Account Holder for which fraud checking is performed.
  */
-export class AccountHolderInformationInput extends SpeakeasyBase {
+export class AccountHolderInformation extends SpeakeasyBase {
     /**
      * Address Object
      */

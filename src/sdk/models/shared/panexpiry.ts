@@ -7,4 +7,4 @@ import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * Contains expiry for masked PAN if received from network
  */
-export class PanExpiryOutput extends SpeakeasyBase {}
+export class PanExpiry extends SpeakeasyBase {}

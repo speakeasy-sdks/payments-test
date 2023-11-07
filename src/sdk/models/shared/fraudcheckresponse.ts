@@ -12,7 +12,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Responses for the fraud check
  */
-export class FraudCheckResponseOutput extends SpeakeasyBase {
+export class FraudCheckResponse extends SpeakeasyBase {
     /**
      * Message received from Issuer, network or processor. Can be blank
      */

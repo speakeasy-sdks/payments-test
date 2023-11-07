@@ -9,7 +9,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Card payment instrument for fraud checking
  */
-export class FraudCardInput extends SpeakeasyBase {
+export class FraudCard extends SpeakeasyBase {
     /**
      * Identifies a unique occurrence of a payment account.
      */

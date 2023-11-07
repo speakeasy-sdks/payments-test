@@ -20,7 +20,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Response information for refund API calls
  */
-export class RefundResponseOutput extends SpeakeasyBase {
+export class RefundResponse extends SpeakeasyBase {
     /**
      * Card owner properties
      */

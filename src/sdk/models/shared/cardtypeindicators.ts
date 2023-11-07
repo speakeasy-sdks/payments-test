@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { PaymentBrandCardTypeCode } from "./paymentbrandcardtypecode";
 import { Expose } from "class-transformer";
 
-export enum CardTypeIndicatorsCardProductTypes {
+export enum CardProductTypes {
     Commercial = "COMMERCIAL",
     Payroll = "PAYROLL",
     Healthcare = "HEALTHCARE",
@@ -39,7 +39,7 @@ export class CardTypeIndicators extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "cardProductTypes" })
-    cardProductTypes?: CardTypeIndicatorsCardProductTypes[];
+    cardProductTypes?: CardProductTypes[];
 
     /**
      * Codifies a high level classification associated with the card account that could indicate how the issuer account is funded or used, e.g. Debit, Credit, Prepaid, Single Use.

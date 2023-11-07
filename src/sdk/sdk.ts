@@ -3,9 +3,9 @@
  */
 
 import * as utils from "../internal/utils";
+import * as shared from "../sdk/models/shared";
 import { Fraud } from "./fraud";
 import { HealthCheck } from "./healthcheck";
-import * as shared from "./models/shared";
 import { Transactions } from "./transactions";
 import axios from "axios";
 import { AxiosInstance } from "axios";
@@ -60,9 +60,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "2.0.52";
-    sdkVersion = "0.7.0";
-    genVersion = "2.171.0";
-    userAgent = "speakeasy-sdk/typescript 0.7.0 2.171.0 2.0.52 testingPayments";
+    sdkVersion = "0.8.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 0.8.0 2.181.1 2.0.52 testingPayments";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -74,6 +74,10 @@ export class SDKConfiguration {
  */
 export class TestingPayments {
     /**
+     * Initiating and processing a payment
+     */
+    public transactions: Transactions;
+    /**
      * Fraud check for a payment
      */
     public fraud: Fraud;
@@ -81,10 +85,6 @@ export class TestingPayments {
      * Check if a particular service is available
      */
     public healthCheck: HealthCheck;
-    /**
-     * Initiating and processing a payment
-     */
-    public transactions: Transactions;
 
     private sdkConfiguration: SDKConfiguration;
 
@@ -104,8 +104,8 @@ export class TestingPayments {
             retryConfig: props?.retryConfig,
         });
 
+        this.transactions = new Transactions(this.sdkConfiguration);
         this.fraud = new Fraud(this.sdkConfiguration);
         this.healthCheck = new HealthCheck(this.sdkConfiguration);
-        this.transactions = new Transactions(this.sdkConfiguration);
     }
 }

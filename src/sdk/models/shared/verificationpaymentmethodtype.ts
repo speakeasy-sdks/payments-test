@@ -3,30 +3,9 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { VerificationACHInput, VerificationACHOutput } from "./verificationach";
-import { VerificationCardInput, VerificationCardOutput } from "./verificationcard";
+import { VerificationACH, VerificationACHOutput } from "./verificationach";
+import { VerificationCard, VerificationCardOutput } from "./verificationcard";
 import { Expose, Type } from "class-transformer";
-
-/**
- * Object with one of the payment method type applicable for verification processing
- */
-export class VerificationPaymentMethodTypeInput extends SpeakeasyBase {
-    /**
-     * Verification of ACH account
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "ach" })
-    @Type(() => VerificationACHInput)
-    ach?: VerificationACHInput;
-
-    /**
-     * Card payment instrument for card verification
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "card" })
-    @Type(() => VerificationCardInput)
-    card?: VerificationCardInput;
-}
 
 /**
  * Object with one of the payment method type applicable for verification processing
@@ -47,4 +26,25 @@ export class VerificationPaymentMethodTypeOutput extends SpeakeasyBase {
     @Expose({ name: "card" })
     @Type(() => VerificationCardOutput)
     card?: VerificationCardOutput;
+}
+
+/**
+ * Object with one of the payment method type applicable for verification processing
+ */
+export class VerificationPaymentMethodType extends SpeakeasyBase {
+    /**
+     * Verification of ACH account
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "ach" })
+    @Type(() => VerificationACH)
+    ach?: VerificationACH;
+
+    /**
+     * Card payment instrument for card verification
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "card" })
+    @Type(() => VerificationCard)
+    card?: VerificationCard;
 }

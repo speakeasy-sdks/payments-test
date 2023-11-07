@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class V2CapturePostRequest extends SpeakeasyBase {
@@ -11,7 +11,7 @@ export class V2CapturePostRequest extends SpeakeasyBase {
      * Capture Request
      */
     @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-    captureRequestInput: shared.CaptureRequestInput;
+    captureRequest: shared.CaptureRequest;
 
     /**
      * Identifies a unique occurrence of a transaction.
@@ -61,5 +61,5 @@ export class V2CapturePostResponse extends SpeakeasyBase {
      * Success
      */
     @SpeakeasyMetadata()
-    paymentResponse?: shared.PaymentResponseOutput;
+    paymentResponse?: shared.PaymentResponse;
 }

@@ -9,15 +9,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Soft merchant information is passed to the card association along with the transaction. This soft merchant information may also be used for cases where smaller businesses or franchise outlets are making a sale in which a merchant aggregator or payment facilitatorprocesses the payment transaction on their behalf.
  */
-export class SoftMerchant extends SpeakeasyBase {
-    /**
-     * Address Object
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "address" })
-    @Type(() => Address)
-    address?: Address;
-
+export class SoftMerchantOutput extends SpeakeasyBase {
     /**
      * Soft merchant email address
      */
@@ -57,7 +49,15 @@ export class SoftMerchant extends SpeakeasyBase {
 /**
  * Soft merchant information is passed to the card association along with the transaction. This soft merchant information may also be used for cases where smaller businesses or franchise outlets are making a sale in which a merchant aggregator or payment facilitatorprocesses the payment transaction on their behalf.
  */
-export class SoftMerchantOutput extends SpeakeasyBase {
+export class SoftMerchant extends SpeakeasyBase {
+    /**
+     * Address Object
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "address" })
+    @Type(() => Address)
+    address?: Address;
+
     /**
      * Soft merchant email address
      */

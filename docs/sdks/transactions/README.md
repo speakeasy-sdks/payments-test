@@ -1,5 +1,5 @@
 # Transactions
-(*transactions*)
+(*.transactions*)
 
 ## Overview
 
@@ -44,6 +44,7 @@ import { TestingPayments } from "testingPayments";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -86,6 +87,7 @@ import { TestingPayments } from "testingPayments";
     requestIdentifier: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -114,11 +116,9 @@ Capture a payment request for existing authorized transaction
 ```typescript
 import { TestingPayments } from "testingPayments";
 import {
+  AccountNumberType,
   AccountOnFile,
-  AuthenticationSCAExemptionReason,
   CaptureMethod,
-  CardAccountNumberType,
-  CardWalletProvider,
   Currency,
   InitiatorType,
   MerchantPreferredRouting,
@@ -126,9 +126,11 @@ import {
   PartialAuthorizationSupport,
   PreferredPaymentNetworkName,
   RecurringSequence,
-  Version1ThreeDSPAResStatus,
-  Version1ThreeDSVEResEnrolled,
-  Version2ThreeDSTransactionStatus,
+  SCAExemptionReason,
+  ThreeDSPAResStatus,
+  ThreeDSTransactionStatus,
+  ThreeDSVEResEnrolled,
+  WalletProvider,
 } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
@@ -140,7 +142,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
   });
 
   const res = await sdk.transactions.v2CapturePost({
-    captureRequestInput: {
+    captureRequest: {
       accountHolder: {
         ipAddress: "127.0.0.1",
         billingAddress: {
@@ -266,6 +268,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -306,6 +309,7 @@ import { TestingPayments } from "testingPayments";
     merchantId: "991234567890",
     minorVersion: "1",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -348,6 +352,7 @@ import { TestingPayments } from "testingPayments";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
     requestIdentifier: "12cc0270-7bed-11e9-a188-1763956dd7f6",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -398,6 +403,7 @@ import { CaptureMethod } from "testingPayments/dist/sdk/models/shared";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -426,14 +432,11 @@ Create a payment request with a specified payment instrument. Authorization and 
 ```typescript
 import { TestingPayments } from "testingPayments";
 import {
+  AccountNumberType,
   AccountOnFile,
   AccountType,
-  AuthenticationSCAExemptionReason,
-  BoletoBankCode,
-  BoletoType,
+  BankCode,
   CaptureMethod,
-  CardAccountNumberType,
-  CardWalletProvider,
   Currency,
   InitiatorType,
   MerchantPreferredRouting,
@@ -442,10 +445,13 @@ import {
   PaymentType,
   PreferredPaymentNetworkName,
   RecurringSequence,
+  SCAExemptionReason,
+  ThreeDSPAResStatus,
+  ThreeDSTransactionStatus,
+  ThreeDSVEResEnrolled,
   TransactionRoutingOverrideList,
-  Version1ThreeDSPAResStatus,
-  Version1ThreeDSVEResEnrolled,
-  Version2ThreeDSTransactionStatus,
+  TypeT,
+  WalletProvider,
 } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
@@ -459,7 +465,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
   const res = await sdk.transactions.v2PaymentPost({
     merchantId: "991234567890",
     minorVersion: "1",
-    paymentInput: {
+    payment: {
       accountHolder: {
         ipAddress: "127.0.0.1",
         billingAddress: {
@@ -524,14 +530,14 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
           latLong: "1,1",
         },
         boleto: {
-          bankCode: BoletoBankCode.Jpm,
+          bankCode: BankCode.Jpm,
           documentNumber: "string",
           dueDate: new RFCDate("2020-09-20"),
           expiryDate: new RFCDate("2020-09-20"),
           paidAmount: "string",
           paidDate: "2018-12-21T09:30:15.987Z",
           ticketInstructions: "Pay to maturity",
-          type: BoletoType.Bdp,
+          type: TypeT.Bdp,
           uniqueNumber: "string",
         },
         card: {
@@ -618,6 +624,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -658,6 +665,7 @@ import { TestingPayments } from "testingPayments";
     merchantId: "991234567890",
     minorVersion: "1",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -700,6 +708,7 @@ import { TestingPayments } from "testingPayments";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
     requestIdentifier: "12cc0270-7bed-11e9-a188-1763956dd7f6",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -751,7 +760,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
   const res = await sdk.transactions.v2RefundPost({
     merchantId: "991234567890",
     minorVersion: "1",
-    refundInput: {
+    refund: {
       accountHolder: {
         ipAddress: "127.0.0.1",
         billingAddress: {
@@ -840,6 +849,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -881,6 +891,7 @@ import { TestingPayments } from "testingPayments";
     minorVersion: "1",
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -924,6 +935,7 @@ import { TestingPayments } from "testingPayments";
     requestIdentifier: "12cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -954,19 +966,19 @@ import { TestingPayments } from "testingPayments";
 import {
   AccountOnFile,
   AccountType,
-  AuthenticationSCAExemptionReason,
+  AchVerificationType,
+  ConsumerVerificationIdType,
   Currency,
   InitiatorType,
   PaymentType,
   RecurringSequence,
+  SCAExemptionReason,
+  ThreeDSPAResStatus,
+  ThreeDSTransactionStatus,
+  ThreeDSVEResEnrolled,
   TransactionRoutingOverrideList,
-  VerificationACHACHVerificationType,
-  VerificationACHConsumerVerificationIdType,
   VerificationCardAccountNumberType,
   VerificationCardWalletProvider,
-  Version1ThreeDSPAResStatus,
-  Version1ThreeDSVEResEnrolled,
-  Version2ThreeDSTransactionStatus,
 } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
@@ -981,7 +993,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
     merchantId: "991234567890",
     minorVersion: "1",
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
-    verificationInput: {
+    verification: {
       accountHolder: {
         ipAddress: "127.0.0.1",
         billingAddress: {
@@ -1056,6 +1068,7 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
       ],
     },
   });
+
 
   if (res.statusCode == 200) {
     // handle response

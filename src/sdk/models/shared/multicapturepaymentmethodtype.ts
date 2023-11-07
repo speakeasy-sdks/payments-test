@@ -3,18 +3,18 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { CardInput } from "./card";
+import { Card } from "./card";
 import { Expose, Type } from "class-transformer";
 
 /**
  * Multi Capture Payment Method Type contains all the payment method code supported for multi capture payment processing capability
  */
-export class MultiCapturePaymentMethodTypeInput extends SpeakeasyBase {
+export class MultiCapturePaymentMethodType extends SpeakeasyBase {
     /**
      * Card payment instrument
      */
     @SpeakeasyMetadata()
     @Expose({ name: "card" })
-    @Type(() => CardInput)
-    card?: CardInput;
+    @Type(() => Card)
+    card?: Card;
 }

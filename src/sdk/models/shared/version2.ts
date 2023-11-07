@@ -8,7 +8,7 @@ import { Expose } from "class-transformer";
 /**
  * Contains value returned in Authentication Response Message (ARes). Y=Authentication successful ; N=Authentication failed ; U=Authentication unavailable ; A=Attempted authentication ;
  */
-export enum Version2ThreeDSTransactionStatus {
+export enum ThreeDSTransactionStatus {
     Y = "Y",
     N = "N",
     U = "U",
@@ -24,7 +24,7 @@ export class Version2 extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "threeDSTransactionStatus" })
-    threeDSTransactionStatus?: Version2ThreeDSTransactionStatus;
+    threeDSTransactionStatus?: ThreeDSTransactionStatus;
 
     /**
      * Contains code indicating the reason for the transaction status in threeDSTransactionStatus.

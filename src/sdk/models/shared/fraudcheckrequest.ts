@@ -3,25 +3,25 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { AccountHolderInformationInput } from "./accountholderinformation";
+import { AccountHolderInformation } from "./accountholderinformation";
 import { Currency } from "./currency";
-import { FraudCheckPaymentMethodTypeInput } from "./fraudcheckpaymentmethodtype";
+import { FraudCheckPaymentMethodType } from "./fraudcheckpaymentmethodtype";
 import { FraudScore } from "./fraudscore";
 import { FraudShipTo } from "./fraudshipto";
-import { MerchantInput } from "./merchant";
+import { Merchant } from "./merchant";
 import { Expose, Type } from "class-transformer";
 
 /**
  * Object for passing fraud check request parameters
  */
-export class FraudCheckRequestInput extends SpeakeasyBase {
+export class FraudCheckRequest extends SpeakeasyBase {
     /**
      * Information about the card Account Holder for which fraud checking is performed.
      */
     @SpeakeasyMetadata()
     @Expose({ name: "accountHolder" })
-    @Type(() => AccountHolderInformationInput)
-    accountHolder?: AccountHolderInformationInput;
+    @Type(() => AccountHolderInformation)
+    accountHolder?: AccountHolderInformation;
 
     /**
      * Specifies the monetary value of the transaction performed.
@@ -50,16 +50,16 @@ export class FraudCheckRequestInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "merchant" })
-    @Type(() => MerchantInput)
-    merchant?: MerchantInput;
+    @Type(() => Merchant)
+    merchant?: Merchant;
 
     /**
      * Object with information for Payment Method Type for  Fraud Check
      */
     @SpeakeasyMetadata()
     @Expose({ name: "paymentMethodType" })
-    @Type(() => FraudCheckPaymentMethodTypeInput)
-    paymentMethodType: FraudCheckPaymentMethodTypeInput;
+    @Type(() => FraudCheckPaymentMethodType)
+    paymentMethodType: FraudCheckPaymentMethodType;
 
     /**
      * Ship To Information used for fraud checking services.

@@ -7,15 +7,15 @@ import { AccountHolder } from "./accountholder";
 import { AccountOnFile } from "./accountonfile";
 import { Currency } from "./currency";
 import { InitiatorType } from "./initiatortype";
-import { MerchantInput } from "./merchant";
-import { RefundPaymentMethodTypeInput } from "./refundpaymentmethodtype";
+import { Merchant } from "./merchant";
+import { RefundPaymentMethodType } from "./refundpaymentmethodtype";
 import { RetailAddenda } from "./retailaddenda";
 import { Expose, Type } from "class-transformer";
 
 /**
  * Input information for refund API calls
  */
-export class RefundInput extends SpeakeasyBase {
+export class Refund extends SpeakeasyBase {
     /**
      * Card owner properties
      */
@@ -57,8 +57,8 @@ export class RefundInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "merchant" })
-    @Type(() => MerchantInput)
-    merchant: MerchantInput;
+    @Type(() => Merchant)
+    merchant: Merchant;
 
     /**
      * A unique merchant assigned identifier for the confirmation of goods and/or services purchased. The merchant order provides the merchant a reference to the prices, quantity and description of goods and/or services to be delivered for all transactions included in the sale.
@@ -72,8 +72,8 @@ export class RefundInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "paymentMethodType" })
-    @Type(() => RefundPaymentMethodTypeInput)
-    paymentMethodType?: RefundPaymentMethodTypeInput;
+    @Type(() => RefundPaymentMethodType)
+    paymentMethodType?: RefundPaymentMethodType;
 
     /**
      * Retail inductry specific attributes.

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class V2RefundPostRequest extends SpeakeasyBase {
@@ -23,7 +23,7 @@ export class V2RefundPostRequest extends SpeakeasyBase {
      * The refund request.
      */
     @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-    refundInput: shared.RefundInput;
+    refund: shared.Refund;
 
     /**
      * Merchant identifier for the request. The value must be unique.
@@ -55,5 +55,5 @@ export class V2RefundPostResponse extends SpeakeasyBase {
      * Success
      */
     @SpeakeasyMetadata()
-    refundResponse?: shared.RefundResponseOutput;
+    refundResponse?: shared.RefundResponse;
 }

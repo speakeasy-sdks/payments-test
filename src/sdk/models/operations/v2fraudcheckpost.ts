@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class V2FraudCheckPostRequest extends SpeakeasyBase {
@@ -11,7 +11,7 @@ export class V2FraudCheckPostRequest extends SpeakeasyBase {
      * The fraud check request.
      */
     @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-    fraudCheckRequestInput: shared.FraudCheckRequestInput;
+    fraudCheckRequest: shared.FraudCheckRequest;
 
     /**
      * Identifier for the merchant account
@@ -55,5 +55,5 @@ export class V2FraudCheckPostResponse extends SpeakeasyBase {
      * Success
      */
     @SpeakeasyMetadata()
-    fraudCheckResponse?: shared.FraudCheckResponseOutput;
+    fraudCheckResponse?: shared.FraudCheckResponse;
 }

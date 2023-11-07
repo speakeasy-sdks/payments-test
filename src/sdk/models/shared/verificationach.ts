@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { AccountType } from "./accounttype";
 import { PaymentType } from "./paymenttype";
 import { Expose, Transform, Type } from "class-transformer";
@@ -11,7 +11,7 @@ import { Expose, Transform, Type } from "class-transformer";
 /**
  * Indicates the type of ACH verification being performed.
  */
-export enum VerificationACHACHVerificationType {
+export enum AchVerificationType {
     Basic = "BASIC",
     AccountStatus = "ACCOUNT_STATUS",
     AccountOwner = "ACCOUNT_OWNER",
@@ -22,7 +22,7 @@ export enum VerificationACHACHVerificationType {
 /**
  * Classifies the type of identifier.
  */
-export enum VerificationACHConsumerVerificationIdType {
+export enum ConsumerVerificationIdType {
     UsDl = "US_DL",
     UsMilitary = "US_MILITARY",
     Passport = "PASSPORT",
@@ -34,83 +34,6 @@ export enum VerificationACHConsumerVerificationIdType {
     MexDl = "MEX_DL",
     OthPrimId = "OTH_PRIM_ID",
     MatConsularId = "MAT_CONSULAR_ID",
-}
-
-/**
- * Verification of ACH account
- */
-export class VerificationACHInput extends SpeakeasyBase {
-    /**
-     * Identifies a unique occurrence of a payment account.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "accountNumber" })
-    accountNumber?: string;
-
-    /**
-     * Type of banking account.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "accountType" })
-    accountType?: AccountType;
-
-    /**
-     * Indicates the type of ACH verification being performed.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "achVerificationType" })
-    achVerificationType?: VerificationACHACHVerificationType;
-
-    /**
-     * A unique identifier assigned by a government agency. Examples include Driver's License number, green card id, and Passport number.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "consumerVerificationId" })
-    consumerVerificationId?: string;
-
-    /**
-     * Classifies a geographic area that represents a first level, legal and political subdivision of a country; for example, Virginia, Bavaria.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "consumerVerificationIdState" })
-    consumerVerificationIdState?: string;
-
-    /**
-     * Classifies the type of identifier.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "consumerVerificationIdType" })
-    consumerVerificationIdType?: VerificationACHConsumerVerificationIdType;
-
-    /**
-     * Identifies the routing and transit number. In the United  States it's 8-9 numeric characters.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "financialInstitutionRoutingNumber" })
-    financialInstitutionRoutingNumber?: string;
-
-    /**
-     * Specifies the year month and day on which the individual was born.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "individualBirthDate" })
-    @Type(() => String)
-    @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
-    individualBirthDate?: RFCDate;
-
-    /**
-     * Identifies the last four digits of the government issued (SSN, EIN, TIN).
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "last4SSN" })
-    last4SSN?: string;
-
-    /**
-     * Identifies how accountholders  initiated debits to their accounts .
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "paymentType" })
-    paymentType?: PaymentType;
 }
 
 /**
@@ -129,7 +52,7 @@ export class VerificationACHOutput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "achVerificationType" })
-    achVerificationType?: VerificationACHACHVerificationType;
+    achVerificationType?: AchVerificationType;
 
     /**
      * A unique identifier assigned by a government agency. Examples include Driver's License number, green card id, and Passport number.
@@ -150,7 +73,7 @@ export class VerificationACHOutput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "consumerVerificationIdType" })
-    consumerVerificationIdType?: VerificationACHConsumerVerificationIdType;
+    consumerVerificationIdType?: ConsumerVerificationIdType;
 
     /**
      * Identifies the routing and transit number. In the United  States it's 8-9 numeric characters.
@@ -181,6 +104,83 @@ export class VerificationACHOutput extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "maskedAccountNumber" })
     maskedAccountNumber?: string;
+
+    /**
+     * Identifies how accountholders  initiated debits to their accounts .
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "paymentType" })
+    paymentType?: PaymentType;
+}
+
+/**
+ * Verification of ACH account
+ */
+export class VerificationACH extends SpeakeasyBase {
+    /**
+     * Identifies a unique occurrence of a payment account.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "accountNumber" })
+    accountNumber?: string;
+
+    /**
+     * Type of banking account.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "accountType" })
+    accountType?: AccountType;
+
+    /**
+     * Indicates the type of ACH verification being performed.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "achVerificationType" })
+    achVerificationType?: AchVerificationType;
+
+    /**
+     * A unique identifier assigned by a government agency. Examples include Driver's License number, green card id, and Passport number.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "consumerVerificationId" })
+    consumerVerificationId?: string;
+
+    /**
+     * Classifies a geographic area that represents a first level, legal and political subdivision of a country; for example, Virginia, Bavaria.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "consumerVerificationIdState" })
+    consumerVerificationIdState?: string;
+
+    /**
+     * Classifies the type of identifier.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "consumerVerificationIdType" })
+    consumerVerificationIdType?: ConsumerVerificationIdType;
+
+    /**
+     * Identifies the routing and transit number. In the United  States it's 8-9 numeric characters.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "financialInstitutionRoutingNumber" })
+    financialInstitutionRoutingNumber?: string;
+
+    /**
+     * Specifies the year month and day on which the individual was born.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "individualBirthDate" })
+    @Type(() => String)
+    @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
+    individualBirthDate?: RFCDate;
+
+    /**
+     * Identifies the last four digits of the government issued (SSN, EIN, TIN).
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "last4SSN" })
+    last4SSN?: string;
 
     /**
      * Identifies how accountholders  initiated debits to their accounts .

@@ -9,9 +9,9 @@ import { CaptureMethod } from "./capturemethod";
 import { Currency } from "./currency";
 import { InitiatorType } from "./initiatortype";
 import { Installment } from "./installment";
-import { MerchantInput } from "./merchant";
+import { Merchant } from "./merchant";
 import { PartialAuthorizationSupport } from "./partialauthorizationsupport";
-import { PaymentMethodTypeInput } from "./paymentmethodtype";
+import { PaymentMethodType } from "./paymentmethodtype";
 import { Recurring } from "./recurring";
 import { RetailAddenda } from "./retailaddenda";
 import { RiskInput } from "./risk";
@@ -22,7 +22,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Request information for payment endpoint
  */
-export class PaymentInput extends SpeakeasyBase {
+export class Payment extends SpeakeasyBase {
     /**
      * Card owner properties
      */
@@ -93,8 +93,8 @@ export class PaymentInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "merchant" })
-    @Type(() => MerchantInput)
-    merchant: MerchantInput;
+    @Type(() => Merchant)
+    merchant: Merchant;
 
     /**
      * A unique merchant assigned identifier for the confirmation of goods and/or services purchased. The merchant order provides the merchant a reference to the prices, quantity and description of goods and/or services to be delivered for all transactions included in the sale.
@@ -122,8 +122,8 @@ export class PaymentInput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "paymentMethodType" })
-    @Type(() => PaymentMethodTypeInput)
-    paymentMethodType: PaymentMethodTypeInput;
+    @Type(() => PaymentMethodType)
+    paymentMethodType: PaymentMethodType;
 
     /**
      * Recurring Payment Object

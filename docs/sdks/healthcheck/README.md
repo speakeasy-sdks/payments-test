@@ -1,5 +1,5 @@
 # HealthCheck
-(*healthCheck*)
+(*.healthCheck*)
 
 ## Overview
 
@@ -28,6 +28,7 @@ import { TestingPayments } from "testingPayments";
   });
 
   const res = await sdk.healthCheck.v2PaymentHealthGet();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -65,6 +66,7 @@ import { TestingPayments } from "testingPayments";
 
   const res = await sdk.healthCheck.v2RefundHealthGet();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -100,6 +102,7 @@ import { TestingPayments } from "testingPayments";
   });
 
   const res = await sdk.healthCheck.v2VerificationHealthGet();
+
 
   if (res.statusCode == 200) {
     // handle response

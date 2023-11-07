@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class V2FraudCheckgetRequest extends SpeakeasyBase {
@@ -49,5 +49,5 @@ export class V2FraudCheckgetResponse extends SpeakeasyBase {
      * Success
      */
     @SpeakeasyMetadata()
-    verificationResponse?: shared.VerificationResponseOutput;
+    verificationResponse?: shared.VerificationResponse;
 }

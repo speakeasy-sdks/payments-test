@@ -20,7 +20,7 @@ import { ResponseStatus } from "./responsestatus";
 import { RetailAddenda } from "./retailaddenda";
 import { Risk } from "./risk";
 import { ShipToOutput } from "./shipto";
-import { SourceAccountInformationOutput } from "./sourceaccountinformation";
+import { SourceAccountInformation } from "./sourceaccountinformation";
 import { TransactionRoutingOverrideList } from "./transactionroutingoverridelist";
 import { TransactionState } from "./transactionstate";
 import { Expose, Type } from "class-transformer";
@@ -28,7 +28,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Response information for payment API calls
  */
-export class PaymentResponseOutput extends SpeakeasyBase {
+export class PaymentResponse extends SpeakeasyBase {
     /**
      * Card owner properties
      */
@@ -290,8 +290,8 @@ export class PaymentResponseOutput extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "sourceAccountInformation" })
-    @Type(() => SourceAccountInformationOutput)
-    sourceAccountInformation?: SourceAccountInformationOutput;
+    @Type(() => SourceAccountInformation)
+    sourceAccountInformation?: SourceAccountInformation;
 
     /**
      * Provides textual information about charges or payments on statements. Using clear and accurate statement descriptors can reduce chargebacks and disputes.

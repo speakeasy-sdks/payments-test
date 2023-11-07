@@ -10,20 +10,13 @@ import { Expose, Type } from "class-transformer";
 /**
  * Contains information about payer authentication using 3-D Secure authentication
  */
-export class ThreeDS extends SpeakeasyBase {
+export class ThreeDSOutput extends SpeakeasyBase {
     /**
      * Identifier provided by the merchant plug in system (MPI) or scheme directory server during payer authentication using 3-D Secure authentication.
      */
     @SpeakeasyMetadata()
     @Expose({ name: "authenticationTransactionId" })
     authenticationTransactionId?: string;
-
-    /**
-     * Base 64 encoded cryptogram received during authorization to verify that the integrity of data contained within a payment request matches what was originally authorized during authentication. This field is specifically used for card authorizations.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "authenticationValue" })
-    authenticationValue?: string;
 
     /**
      * Indicates 3-D Secure program protocol used in the transaction.
@@ -52,13 +45,20 @@ export class ThreeDS extends SpeakeasyBase {
 /**
  * Contains information about payer authentication using 3-D Secure authentication
  */
-export class ThreeDSOutput extends SpeakeasyBase {
+export class ThreeDS extends SpeakeasyBase {
     /**
      * Identifier provided by the merchant plug in system (MPI) or scheme directory server during payer authentication using 3-D Secure authentication.
      */
     @SpeakeasyMetadata()
     @Expose({ name: "authenticationTransactionId" })
     authenticationTransactionId?: string;
+
+    /**
+     * Base 64 encoded cryptogram received during authorization to verify that the integrity of data contained within a payment request matches what was originally authorized during authentication. This field is specifically used for card authorizations.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "authenticationValue" })
+    authenticationValue?: string;
 
     /**
      * Indicates 3-D Secure program protocol used in the transaction.

@@ -8,7 +8,7 @@ import { Expose } from "class-transformer";
 /**
  * General status of all resources
  */
-export enum HealthCheckResourceStatus {
+export enum Status {
     Pass = "PASS",
     Fail = "FAIL",
     Warn = "WARN",
@@ -23,5 +23,5 @@ export class HealthCheckResource extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "status" })
-    status?: HealthCheckResourceStatus;
+    status?: Status;
 }

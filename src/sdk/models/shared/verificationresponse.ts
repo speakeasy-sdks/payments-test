@@ -19,7 +19,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * Response information for verification API calls
  */
-export class VerificationResponseOutput extends SpeakeasyBase {
+export class VerificationResponse extends SpeakeasyBase {
     /**
      * Card owner properties
      */
