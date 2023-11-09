@@ -3,17 +3,17 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { AccountHolderOutput } from "./accountholder";
+import { AccountHolderOutput } from "./accountholderoutput";
 import { AccountOnFile } from "./accountonfile";
 import { Currency } from "./currency";
 import { Information } from "./information";
 import { InitiatorType } from "./initiatortype";
-import { MerchantOutput } from "./merchant";
+import { MerchantOutput } from "./merchantoutput";
 import { RecurringSequence } from "./recurringsequence";
 import { ResponseStatus } from "./responsestatus";
 import { Risk } from "./risk";
 import { TransactionRoutingOverrideList } from "./transactionroutingoverridelist";
-import { VerificationPaymentMethodTypeOutput } from "./verificationpaymentmethodtype";
+import { VerificationPaymentMethodTypeOutput } from "./verificationpaymentmethodtypeoutput";
 import { Expose, Type } from "class-transformer";
 
 /**

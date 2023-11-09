@@ -14,7 +14,7 @@ import { PartialAuthorizationSupport } from "./partialauthorizationsupport";
 import { PaymentMethodType } from "./paymentmethodtype";
 import { Recurring } from "./recurring";
 import { RetailAddenda } from "./retailaddenda";
-import { RiskInput } from "./risk";
+import { RiskInput } from "./riskinput";
 import { ShipTo } from "./shipto";
 import { TransactionRoutingOverrideList } from "./transactionroutingoverridelist";
 import { Expose, Type } from "class-transformer";

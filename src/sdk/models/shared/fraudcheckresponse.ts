@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { MerchantOutput } from "./merchant";
+import { MerchantOutput } from "./merchantoutput";
 import { ResponseStatus } from "./responsestatus";
 import { RiskDecision } from "./riskdecision";
 import { RiskElement } from "./riskelement";

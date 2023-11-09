@@ -56,15 +56,3 @@ export class ShipTo extends SpeakeasyBase {
     @Expose({ name: "shippingDescription" })
     shippingDescription?: string;
 }
-
-/**
- * Object containing information about the recipients
- */
-export class ShipToOutput extends SpeakeasyBase {
-    /**
-     * Description of shipping or delivery method
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "shippingDescription" })
-    shippingDescription?: string;
-}

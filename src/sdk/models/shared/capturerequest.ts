@@ -15,7 +15,7 @@ import { MultiCapturePaymentMethodType } from "./multicapturepaymentmethodtype";
 import { PartialAuthorizationSupport } from "./partialauthorizationsupport";
 import { Recurring } from "./recurring";
 import { RetailAddenda } from "./retailaddenda";
-import { RiskInput } from "./risk";
+import { RiskInput } from "./riskinput";
 import { ShipTo } from "./shipto";
 import { Expose, Type } from "class-transformer";
 

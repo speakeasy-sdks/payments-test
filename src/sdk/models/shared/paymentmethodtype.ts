@@ -3,11 +3,11 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { Ach, AchOutput } from "./ach";
-import { Applepay, ApplepayOutput } from "./applepay";
-import { Boleto, BoletoInput } from "./boleto";
-import { Card, CardOutput } from "./card";
-import { Googlepay, GooglepayOutput } from "./googlepay";
+import { Ach } from "./ach";
+import { Applepay } from "./applepay";
+import { BoletoInput } from "./boleto";
+import { Card } from "./cardoutput";
+import { Googlepay } from "./googlepay";
 import { Expose, Type } from "class-transformer";
 
 /**
@@ -53,49 +53,4 @@ export class PaymentMethodType extends SpeakeasyBase {
     @Expose({ name: "googlepay" })
     @Type(() => Googlepay)
     googlepay?: Googlepay;
-}
-
-/**
- * paymentType
- */
-export class PaymentMethodTypeOutput extends SpeakeasyBase {
-    /**
-     * Object for ACH (Automated Clearing House) payment method which occurs whenever someone instructs the ACH network to ?push? money from their account to someone else's. This is mostly used in USA.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "ach" })
-    @Type(() => AchOutput)
-    ach?: AchOutput;
-
-    /**
-     * Use is for encrypted bundles for web or Internet acceptance of digital device wallets such as Apple Pay
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "applepay" })
-    @Type(() => ApplepayOutput)
-    applepay?: ApplepayOutput;
-
-    /**
-     * Boleto payment information
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "boleto" })
-    @Type(() => Boleto)
-    boleto?: Boleto;
-
-    /**
-     * Card payment instrument
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "card" })
-    @Type(() => CardOutput)
-    card?: CardOutput;
-
-    /**
-     * Use is for encrypted bundles for web or Internet acceptance of digital device wallets such as Google Pay
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "googlepay" })
-    @Type(() => GooglepayOutput)
-    googlepay?: GooglepayOutput;
 }

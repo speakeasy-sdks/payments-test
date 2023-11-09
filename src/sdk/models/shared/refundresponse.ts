@@ -3,14 +3,14 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { AccountHolderOutput } from "./accountholder";
+import { AccountHolderOutput } from "./accountholderoutput";
 import { AccountOnFile } from "./accountonfile";
 import { Currency } from "./currency";
 import { Information } from "./information";
 import { InitiatorType } from "./initiatortype";
-import { MerchantOutput } from "./merchant";
+import { MerchantOutput } from "./merchantoutput";
 import { PaymentRequest } from "./paymentrequest";
-import { RefundPaymentMethodTypeOutput } from "./refundpaymentmethodtype";
+import { RefundPaymentMethodTypeOutput } from "./refundpaymentmethodtypeoutput";
 import { ResponseStatus } from "./responsestatus";
 import { RetailAddenda } from "./retailaddenda";
 import { TransactionRoutingOverrideList } from "./transactionroutingoverridelist";

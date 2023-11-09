@@ -11,20 +11,6 @@ import { Expose, Transform, Type } from "class-transformer";
 /**
  * Card owner properties
  */
-export class AccountHolderOutput extends SpeakeasyBase {
-    /**
-     * Designates the century, year, month and day that a merchant's customer profile has been first defined.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "consumerIdCreationDate" })
-    @Type(() => String)
-    @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
-    consumerIdCreationDate?: RFCDate;
-}
-
-/**
- * Card owner properties
- */
 export class AccountHolder extends SpeakeasyBase {
     /**
      * IP Address from where the transaction is originating

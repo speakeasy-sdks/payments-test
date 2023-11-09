@@ -1,5 +1,5 @@
 # HealthCheck
-(*.healthCheck*)
+(*healthCheck*)
 
 ## Overview
 
@@ -29,7 +29,6 @@ import { TestingPayments } from "testingPayments";
 
   const res = await sdk.healthCheck.v2PaymentHealthGet();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -45,8 +44,13 @@ import { TestingPayments } from "testingPayments";
 
 ### Response
 
-**Promise<[operations.V2PaymentHealthGetResponse](../../models/operations/v2paymenthealthgetresponse.md)>**
+**Promise<[operations.V2PaymentHealthGetResponse](../../sdk/models/operations/v2paymenthealthgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HealthCheckResource | 429,503                    | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## v2RefundHealthGet
 
@@ -66,7 +70,6 @@ import { TestingPayments } from "testingPayments";
 
   const res = await sdk.healthCheck.v2RefundHealthGet();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -82,8 +85,13 @@ import { TestingPayments } from "testingPayments";
 
 ### Response
 
-**Promise<[operations.V2RefundHealthGetResponse](../../models/operations/v2refundhealthgetresponse.md)>**
+**Promise<[operations.V2RefundHealthGetResponse](../../sdk/models/operations/v2refundhealthgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HealthCheckResource | 429,503                    | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## v2VerificationHealthGet
 
@@ -103,7 +111,6 @@ import { TestingPayments } from "testingPayments";
 
   const res = await sdk.healthCheck.v2VerificationHealthGet();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -119,5 +126,10 @@ import { TestingPayments } from "testingPayments";
 
 ### Response
 
-**Promise<[operations.V2VerificationHealthGetResponse](../../models/operations/v2verificationhealthgetresponse.md)>**
+**Promise<[operations.V2VerificationHealthGetResponse](../../sdk/models/operations/v2verificationhealthgetresponse.md)>**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HealthCheckResource | 429,503                    | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |

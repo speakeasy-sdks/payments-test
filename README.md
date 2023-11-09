@@ -53,7 +53,7 @@ import { TestingPayments } from "testingPayments";
 ## Available Resources and Operations
 
 
-### [.transactions](docs/sdks/transactions/README.md)
+### [transactions](docs/sdks/transactions/README.md)
 
 * [v2CaptureByIdGet](docs/sdks/transactions/README.md#v2capturebyidget) - Retrieve Payment Details by transaction Id
 * [v2CaptureGet](docs/sdks/transactions/README.md#v2captureget) - Retrieve Payment Details
@@ -69,13 +69,13 @@ import { TestingPayments } from "testingPayments";
 * [v2VerificationGet](docs/sdks/transactions/README.md#v2verificationget) - Get a specific verification transaction by request Id
 * [v2VerificationPost](docs/sdks/transactions/README.md#v2verificationpost) - Verify a payment instrument
 
-### [.fraud](docs/sdks/fraud/README.md)
+### [fraud](docs/sdks/fraud/README.md)
 
 * [v2FraudCheckByIdGet](docs/sdks/fraud/README.md#v2fraudcheckbyidget) - Retrieve fraud response
 * [v2FraudCheckPost](docs/sdks/fraud/README.md#v2fraudcheckpost) - Fraud check
 * [v2FraudCheckget](docs/sdks/fraud/README.md#v2fraudcheckget) - Retrieve fraud response
 
-### [.healthCheck](docs/sdks/healthcheck/README.md)
+### [healthCheck](docs/sdks/healthcheck/README.md)
 
 * [v2PaymentHealthGet](docs/sdks/healthcheck/README.md#v2paymenthealthget) - Health check for payments
 * [v2RefundHealthGet](docs/sdks/healthcheck/README.md#v2refundhealthget) - Health check for refunds
@@ -105,7 +105,12 @@ Here's an example of one such pagination call:
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 
 ## Example
@@ -130,11 +135,10 @@ import { TestingPayments } from "testingPayments";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
   } catch (e) { 
-    if (e instanceof messages) {
+    if (e instanceof errors.Messages) {
       console.error(e) // handle exception 
     
   }
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -236,19 +240,16 @@ const httpClient = axios.create({
 
 const sdk = new TestingPayments({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 
 
 <!-- Start Authentication -->
-
 # Authentication
 
 ## Per-Client Security Schemes
 
-Your SDK supports the following security scheme globally:
+This SDK supports the following security scheme globally:
 
 | Name         | Type         | Scheme       |
 | ------------ | ------------ | ------------ |

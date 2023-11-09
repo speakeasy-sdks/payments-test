@@ -3,8 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { TokenAuthenticationResult } from "./tokenauthenticationresult";
-import { Expose, Type } from "class-transformer";
+import { Expose } from "class-transformer";
 
 /**
  * The authentication object allows you to opt in to additional security features specific for refund
@@ -23,24 +22,4 @@ export class RefundAuthentication extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "tokenAuthenticationValue" })
     tokenAuthenticationValue?: string;
-}
-
-/**
- * The authentication object allows you to opt in to additional security features specific for refund
- */
-export class RefundAuthenticationOutput extends SpeakeasyBase {
-    /**
-     * Describes the Electronic Commerce Indicator used in cardholder authentication on a network token
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "electronicCommerceIndicator" })
-    electronicCommerceIndicator?: string;
-
-    /**
-     * Returned when more information about token authentication is received from the network
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "tokenAuthenticationResult" })
-    @Type(() => TokenAuthenticationResult)
-    tokenAuthenticationResult?: TokenAuthenticationResult;
 }

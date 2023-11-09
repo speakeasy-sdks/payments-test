@@ -25,78 +25,6 @@ export enum TypeT {
 /**
  * Boleto payment information
  */
-export class BoletoInput extends SpeakeasyBase {
-    /**
-     * Indicates the bank issuing the Boleto
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "bankCode" })
-    bankCode: BankCode;
-
-    /**
-     * Ticket identifier
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "documentNumber" })
-    documentNumber: string;
-
-    /**
-     * Date payment is due by
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "dueDate" })
-    @Type(() => String)
-    @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
-    dueDate: RFCDate;
-
-    /**
-     * Designates the year, month, and day in which the Convenience Store Payment document will no longer be recognized as a valid payment document to be utilized at the convenience store.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "expiryDate" })
-    @Type(() => String)
-    @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
-    expiryDate?: RFCDate;
-
-    /**
-     * Actual amount paid.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "paidAmount" })
-    paidAmount: string;
-
-    /**
-     * Date and time in which the voucher or ticket was paid.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "paidDate" })
-    paidDate: string;
-
-    /**
-     * Ticket instructions
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "ticketInstructions" })
-    ticketInstructions: string;
-
-    /**
-     * Boleto type of Duplicata Mercantil or Boleto de Proposta
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "type" })
-    type: TypeT;
-
-    /**
-     * Number that uniquely identifies a Boleto for an account
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "uniqueNumber" })
-    uniqueNumber: string;
-}
-
-/**
- * Boleto payment information
- */
 export class Boleto extends SpeakeasyBase {
     /**
      * Indicates the bank issuing the Boleto
@@ -178,6 +106,78 @@ export class Boleto extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "status" })
     status?: ProcessorStatus;
+
+    /**
+     * Ticket instructions
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "ticketInstructions" })
+    ticketInstructions: string;
+
+    /**
+     * Boleto type of Duplicata Mercantil or Boleto de Proposta
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type: TypeT;
+
+    /**
+     * Number that uniquely identifies a Boleto for an account
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "uniqueNumber" })
+    uniqueNumber: string;
+}
+
+/**
+ * Boleto payment information
+ */
+export class BoletoInput extends SpeakeasyBase {
+    /**
+     * Indicates the bank issuing the Boleto
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "bankCode" })
+    bankCode: BankCode;
+
+    /**
+     * Ticket identifier
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "documentNumber" })
+    documentNumber: string;
+
+    /**
+     * Date payment is due by
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "dueDate" })
+    @Type(() => String)
+    @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
+    dueDate: RFCDate;
+
+    /**
+     * Designates the year, month, and day in which the Convenience Store Payment document will no longer be recognized as a valid payment document to be utilized at the convenience store.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiryDate" })
+    @Type(() => String)
+    @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
+    expiryDate?: RFCDate;
+
+    /**
+     * Actual amount paid.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "paidAmount" })
+    paidAmount: string;
+
+    /**
+     * Date and time in which the voucher or ticket was paid.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "paidDate" })
+    paidDate: string;
 
     /**
      * Ticket instructions

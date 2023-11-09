@@ -3,8 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { PanExpiry } from "./panexpiry";
-import { Expose, Type } from "class-transformer";
+import { Expose } from "class-transformer";
 
 /**
  * Contains response information related to account updater request
@@ -16,63 +15,4 @@ export class AccountUpdater extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "requestAccountUpdater" })
     requestAccountUpdater?: boolean;
-}
-
-/**
- * Status of account updater request received from the network
- */
-export enum AccountUpdaterResponse {
-    NewAccount = "NEW_ACCOUNT",
-    NewExpiry = "NEW_EXPIRY",
-    NewAccountAndExpiry = "NEW_ACCOUNT_AND_EXPIRY",
-    ClosedAccount = "CLOSED_ACCOUNT",
-    ProvidedExpiryNewer = "PROVIDED_EXPIRY_NEWER",
-    ContactCardholder = "CONTACT_CARDHOLDER",
-    MatchNoUpdate = "MATCH_NO_UPDATE",
-    NoMatchNonParticipatingBin = "NO_MATCH_NON_PARTICIPATING_BIN",
-    NoMatchParticipatingBin = "NO_MATCH_PARTICIPATING_BIN",
-    IssuerNotParticipating = "ISSUER_NOT_PARTICIPATING",
-    CardholderOptOut = "CARDHOLDER_OPT_OUT",
-    PortfolioConversion = "PORTFOLIO_CONVERSION",
-}
-
-/**
- * Contains response information related to account updater request
- */
-export class AccountUpdaterOutput extends SpeakeasyBase {
-    /**
-     * The Card Number is a number recognized by various payment systems to route debit card, ATM and credit Card transactions to an issuer and to identify the underlying account to which each transaction should be applied. Transactions may be initiated from physical or non-physical devices (e.g. debit card, ATM, credit card, Single Use Account (SUA), Near Field Communication (NFC), etc.).
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "accountNumber" })
-    accountNumber?: string;
-
-    /**
-     * indicates whether Account Updater service was successfully evoked or if there was an error
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "accountUpdaterReasonCode" })
-    accountUpdaterReasonCode?: string;
-
-    /**
-     * long description of account updater results
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "accountUpdaterReasonMessage" })
-    accountUpdaterReasonMessage?: string;
-
-    /**
-     * Status of account updater request received from the network
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "accountUpdaterResponse" })
-    accountUpdaterResponse?: AccountUpdaterResponse;
-
-    /**
-     * Contains expiry for masked PAN if received from network
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "newAccountExpiry" })
-    @Type(() => PanExpiry)
-    newAccountExpiry?: PanExpiry;
 }

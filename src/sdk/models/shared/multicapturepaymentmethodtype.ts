@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { Card } from "./card";
+import { Card } from "./cardoutput";
 import { Expose, Type } from "class-transformer";
 
 /**

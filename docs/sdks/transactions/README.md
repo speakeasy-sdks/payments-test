@@ -1,5 +1,5 @@
 # Transactions
-(*.transactions*)
+(*transactions*)
 
 ## Overview
 
@@ -44,7 +44,6 @@ import { TestingPayments } from "testingPayments";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -53,16 +52,21 @@ import { TestingPayments } from "testingPayments";
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.V2CaptureByIdGetRequest](../../models/operations/v2capturebyidgetrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.V2CaptureByIdGetRequest](../../sdk/models/operations/v2capturebyidgetrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
 
 
 ### Response
 
-**Promise<[operations.V2CaptureByIdGetResponse](../../models/operations/v2capturebyidgetresponse.md)>**
+**Promise<[operations.V2CaptureByIdGetResponse](../../sdk/models/operations/v2capturebyidgetresponse.md)>**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 ## v2CaptureGet
 
@@ -87,7 +91,6 @@ import { TestingPayments } from "testingPayments";
     requestIdentifier: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -96,16 +99,21 @@ import { TestingPayments } from "testingPayments";
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.V2CaptureGetRequest](../../models/operations/v2capturegetrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.V2CaptureGetRequest](../../sdk/models/operations/v2capturegetrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response
 
-**Promise<[operations.V2CaptureGetResponse](../../models/operations/v2capturegetresponse.md)>**
+**Promise<[operations.V2CaptureGetResponse](../../sdk/models/operations/v2capturegetresponse.md)>**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 ## v2CapturePost
 
@@ -268,7 +276,6 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -277,16 +284,21 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.V2CapturePostRequest](../../models/operations/v2capturepostrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.V2CapturePostRequest](../../sdk/models/operations/v2capturepostrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
 
 
 ### Response
 
-**Promise<[operations.V2CapturePostResponse](../../models/operations/v2capturepostresponse.md)>**
+**Promise<[operations.V2CapturePostResponse](../../sdk/models/operations/v2capturepostresponse.md)>**
+### Errors
 
+| Error Object                | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.Messages             | 400,401,403,412,500,503,504 | application/json            |
+| errors.SDKError             | 400-600                     | */*                         |
 
 ## v2PaymentByIdGet
 
@@ -310,7 +322,6 @@ import { TestingPayments } from "testingPayments";
     minorVersion: "1",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -319,16 +330,21 @@ import { TestingPayments } from "testingPayments";
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.V2PaymentByIdGetRequest](../../models/operations/v2paymentbyidgetrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.V2PaymentByIdGetRequest](../../sdk/models/operations/v2paymentbyidgetrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
 
 
 ### Response
 
-**Promise<[operations.V2PaymentByIdGetResponse](../../models/operations/v2paymentbyidgetresponse.md)>**
+**Promise<[operations.V2PaymentByIdGetResponse](../../sdk/models/operations/v2paymentbyidgetresponse.md)>**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 ## v2PaymentGet
 
@@ -353,7 +369,6 @@ import { TestingPayments } from "testingPayments";
     requestIdentifier: "12cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -362,16 +377,21 @@ import { TestingPayments } from "testingPayments";
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.V2PaymentGetRequest](../../models/operations/v2paymentgetrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.V2PaymentGetRequest](../../sdk/models/operations/v2paymentgetrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response
 
-**Promise<[operations.V2PaymentGetResponse](../../models/operations/v2paymentgetresponse.md)>**
+**Promise<[operations.V2PaymentGetResponse](../../sdk/models/operations/v2paymentgetresponse.md)>**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 ## v2PaymentPatch
 
@@ -403,7 +423,6 @@ import { CaptureMethod } from "testingPayments/dist/sdk/models/shared";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -412,16 +431,21 @@ import { CaptureMethod } from "testingPayments/dist/sdk/models/shared";
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.V2PaymentPatchRequest](../../models/operations/v2paymentpatchrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.V2PaymentPatchRequest](../../sdk/models/operations/v2paymentpatchrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
 
 
 ### Response
 
-**Promise<[operations.V2PaymentPatchResponse](../../models/operations/v2paymentpatchresponse.md)>**
+**Promise<[operations.V2PaymentPatchResponse](../../sdk/models/operations/v2paymentpatchresponse.md)>**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 ## v2PaymentPost
 
@@ -624,7 +648,6 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -633,16 +656,21 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.V2PaymentPostRequest](../../models/operations/v2paymentpostrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.V2PaymentPostRequest](../../sdk/models/operations/v2paymentpostrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
 
 
 ### Response
 
-**Promise<[operations.V2PaymentPostResponse](../../models/operations/v2paymentpostresponse.md)>**
+**Promise<[operations.V2PaymentPostResponse](../../sdk/models/operations/v2paymentpostresponse.md)>**
+### Errors
 
+| Error Object                | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.Messages             | 400,401,403,412,500,503,504 | application/json            |
+| errors.SDKError             | 400-600                     | */*                         |
 
 ## v2RefundByIdGet
 
@@ -666,7 +694,6 @@ import { TestingPayments } from "testingPayments";
     minorVersion: "1",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -675,16 +702,21 @@ import { TestingPayments } from "testingPayments";
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.V2RefundByIdGetRequest](../../models/operations/v2refundbyidgetrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.V2RefundByIdGetRequest](../../sdk/models/operations/v2refundbyidgetrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
 
 
 ### Response
 
-**Promise<[operations.V2RefundByIdGetResponse](../../models/operations/v2refundbyidgetresponse.md)>**
+**Promise<[operations.V2RefundByIdGetResponse](../../sdk/models/operations/v2refundbyidgetresponse.md)>**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 ## v2RefundGet
 
@@ -709,7 +741,6 @@ import { TestingPayments } from "testingPayments";
     requestIdentifier: "12cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -718,16 +749,21 @@ import { TestingPayments } from "testingPayments";
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [operations.V2RefundGetRequest](../../models/operations/v2refundgetrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.V2RefundGetRequest](../../sdk/models/operations/v2refundgetrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
 
-**Promise<[operations.V2RefundGetResponse](../../models/operations/v2refundgetresponse.md)>**
+**Promise<[operations.V2RefundGetResponse](../../sdk/models/operations/v2refundgetresponse.md)>**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 ## v2RefundPost
 
@@ -849,7 +885,6 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -858,16 +893,21 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.V2RefundPostRequest](../../models/operations/v2refundpostrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.V2RefundPostRequest](../../sdk/models/operations/v2refundpostrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response
 
-**Promise<[operations.V2RefundPostResponse](../../models/operations/v2refundpostresponse.md)>**
+**Promise<[operations.V2RefundPostResponse](../../sdk/models/operations/v2refundpostresponse.md)>**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 ## v2VerificationByIdGet
 
@@ -892,7 +932,6 @@ import { TestingPayments } from "testingPayments";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -901,16 +940,21 @@ import { TestingPayments } from "testingPayments";
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.V2VerificationByIdGetRequest](../../models/operations/v2verificationbyidgetrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.V2VerificationByIdGetRequest](../../sdk/models/operations/v2verificationbyidgetrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
 
 
 ### Response
 
-**Promise<[operations.V2VerificationByIdGetResponse](../../models/operations/v2verificationbyidgetresponse.md)>**
+**Promise<[operations.V2VerificationByIdGetResponse](../../sdk/models/operations/v2verificationbyidgetresponse.md)>**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 ## v2VerificationGet
 
@@ -935,7 +979,6 @@ import { TestingPayments } from "testingPayments";
     requestIdentifier: "12cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -944,16 +987,21 @@ import { TestingPayments } from "testingPayments";
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.V2VerificationGetRequest](../../models/operations/v2verificationgetrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.V2VerificationGetRequest](../../sdk/models/operations/v2verificationgetrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response
 
-**Promise<[operations.V2VerificationGetResponse](../../models/operations/v2verificationgetresponse.md)>**
+**Promise<[operations.V2VerificationGetResponse](../../sdk/models/operations/v2verificationgetresponse.md)>**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 ## v2VerificationPost
 
@@ -1069,7 +1117,6 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
     },
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1078,13 +1125,18 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.V2VerificationPostRequest](../../models/operations/v2verificationpostrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.V2VerificationPostRequest](../../sdk/models/operations/v2verificationpostrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response
 
-**Promise<[operations.V2VerificationPostResponse](../../models/operations/v2verificationpostresponse.md)>**
+**Promise<[operations.V2VerificationPostResponse](../../sdk/models/operations/v2verificationpostresponse.md)>**
+### Errors
 
+| Error Object                | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.Messages             | 400,401,403,412,500,503,504 | application/json            |
+| errors.SDKError             | 400-600                     | */*                         |

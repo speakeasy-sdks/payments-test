@@ -1,5 +1,5 @@
 # Fraud
-(*.fraud*)
+(*fraud*)
 
 ## Overview
 
@@ -33,7 +33,6 @@ import { TestingPayments } from "testingPayments";
     minorVersion: "1",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -42,16 +41,21 @@ import { TestingPayments } from "testingPayments";
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.V2FraudCheckByIdGetRequest](../../models/operations/v2fraudcheckbyidgetrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.V2FraudCheckByIdGetRequest](../../sdk/models/operations/v2fraudcheckbyidgetrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
 
-**Promise<[operations.V2FraudCheckByIdGetResponse](../../models/operations/v2fraudcheckbyidgetresponse.md)>**
+**Promise<[operations.V2FraudCheckByIdGetResponse](../../sdk/models/operations/v2fraudcheckbyidgetresponse.md)>**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 ## v2FraudCheckPost
 
@@ -142,7 +146,6 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -151,16 +154,21 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.V2FraudCheckPostRequest](../../models/operations/v2fraudcheckpostrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.V2FraudCheckPostRequest](../../sdk/models/operations/v2fraudcheckpostrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
 
 
 ### Response
 
-**Promise<[operations.V2FraudCheckPostResponse](../../models/operations/v2fraudcheckpostresponse.md)>**
+**Promise<[operations.V2FraudCheckPostResponse](../../sdk/models/operations/v2fraudcheckpostresponse.md)>**
+### Errors
 
+| Error Object                | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.Messages             | 400,401,403,412,500,503,504 | application/json            |
+| errors.SDKError             | 400-600                     | */*                         |
 
 ## v2FraudCheckget
 
@@ -184,7 +192,6 @@ import { TestingPayments } from "testingPayments";
     requestId: "10cc0270-7bed-11e9-a188-1763956dd7f6",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -193,13 +200,18 @@ import { TestingPayments } from "testingPayments";
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.V2FraudCheckgetRequest](../../models/operations/v2fraudcheckgetrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.V2FraudCheckgetRequest](../../sdk/models/operations/v2fraudcheckgetrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
 
 
 ### Response
 
-**Promise<[operations.V2FraudCheckgetResponse](../../models/operations/v2fraudcheckgetresponse.md)>**
+**Promise<[operations.V2FraudCheckgetResponse](../../sdk/models/operations/v2fraudcheckgetresponse.md)>**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |

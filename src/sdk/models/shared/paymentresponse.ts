@@ -3,23 +3,23 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { AccountHolderOutput } from "./accountholder";
+import { AccountHolderOutput } from "./accountholderoutput";
 import { AccountOnFile } from "./accountonfile";
 import { CaptureMethod } from "./capturemethod";
 import { Currency } from "./currency";
 import { Information } from "./information";
 import { InitiatorType } from "./initiatortype";
 import { Installment } from "./installment";
-import { MerchantOutput } from "./merchant";
+import { MerchantOutput } from "./merchantoutput";
 import { MultiCapture } from "./multicapture";
 import { PartialAuthorizationSupport } from "./partialauthorizationsupport";
-import { PaymentMethodTypeOutput } from "./paymentmethodtype";
+import { PaymentMethodTypeOutput } from "./paymentmethodtypeoutput";
 import { PaymentRequest } from "./paymentrequest";
 import { Recurring } from "./recurring";
 import { ResponseStatus } from "./responsestatus";
 import { RetailAddenda } from "./retailaddenda";
 import { Risk } from "./risk";
-import { ShipToOutput } from "./shipto";
+import { ShipToOutput } from "./shiptooutput";
 import { SourceAccountInformation } from "./sourceaccountinformation";
 import { TransactionRoutingOverrideList } from "./transactionroutingoverridelist";
 import { TransactionState } from "./transactionstate";

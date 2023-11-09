@@ -25,15 +25,3 @@ export class Applepay extends SpeakeasyBase {
     @Expose({ name: "latLong" })
     latLong?: string;
 }
-
-/**
- * Use is for encrypted bundles for web or Internet acceptance of digital device wallets such as Apple Pay
- */
-export class ApplepayOutput extends SpeakeasyBase {
-    /**
-     * Identifies the latitude and longitude coordinates of the digital device when it is being provisioned. Information is expressed in the order of latitude then longitude with values rounded to the nearest whole digit.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "latLong" })
-    latLong?: string;
-}
