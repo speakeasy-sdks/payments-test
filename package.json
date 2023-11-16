@@ -1,6 +1,6 @@
 {
   "name": "testingPayments",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "author": "testing",
   "scripts": {
     "prepare": "tsc --build",
