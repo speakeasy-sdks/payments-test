@@ -3,9 +3,7 @@
  */
 
 import { SpeakeasyMetadata } from "../../../internal/utils";
-import { Information } from "./information";
-import { ResponseStatus } from "./responsestatus";
-import { ValidationMessage } from "./validationmessage";
+import * as shared from "../../../sdk/models/shared";
 import { classToPlain, Expose, Type } from "class-transformer";
 
 /**
@@ -17,8 +15,8 @@ export class Messages extends Error {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "information" })
-    @Type(() => Information)
-    information?: Information;
+    @Type(() => shared.Information)
+    information?: shared.Information;
 
     /**
      * Short explanation for response status
@@ -39,15 +37,15 @@ export class Messages extends Error {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "responseStatus" })
-    responseStatus: ResponseStatus;
+    responseStatus: shared.ResponseStatus;
 
     /**
      * Information about errors occurred in transaction validation
      */
-    @SpeakeasyMetadata({ elemType: ValidationMessage })
+    @SpeakeasyMetadata({ elemType: shared.ValidationMessage })
     @Expose({ name: "validationErrors" })
-    @Type(() => ValidationMessage)
-    validationErrors?: ValidationMessage[];
+    @Type(() => shared.ValidationMessage)
+    validationErrors?: shared.ValidationMessage[];
 
     constructor(err?: Messages) {
         super();

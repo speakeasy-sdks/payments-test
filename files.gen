@@ -97,6 +97,7 @@ src/sdk/models/shared/currency.ts
 src/sdk/models/shared/capturemethod.ts
 src/sdk/models/shared/accountonfile.ts
 src/sdk/models/shared/accountholderoutput.ts
+src/sdk/models/shared/validationmessage.ts
 src/sdk/models/shared/capturerequest.ts
 src/sdk/models/shared/shipto.ts
 src/sdk/models/shared/address.ts
@@ -142,12 +143,8 @@ src/sdk/models/shared/fraudcheckpaymentmethodtype.ts
 src/sdk/models/shared/fraudcard.ts
 src/sdk/models/shared/fraudscore.ts
 src/sdk/models/shared/accountholderinformation.ts
-src/sdk/models/shared/healthcheckresource.ts
 src/sdk/models/shared/security.ts
 src/sdk/models/errors/messages.ts
-src/sdk/models/errors/validationmessage.ts
-src/sdk/models/errors/responsestatus.ts
-src/sdk/models/errors/information.ts
 src/sdk/models/errors/healthcheckresource.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
@@ -265,6 +262,7 @@ docs/sdk/models/shared/currency.md
 docs/sdk/models/shared/capturemethod.md
 docs/sdk/models/shared/accountonfile.md
 docs/sdk/models/shared/accountholderoutput.md
+docs/sdk/models/shared/validationmessage.md
 docs/sdk/models/shared/capturerequest.md
 docs/sdk/models/shared/shipto.md
 docs/sdk/models/shared/address.md
@@ -319,13 +317,8 @@ docs/sdk/models/shared/fraudcheckpaymentmethodtype.md
 docs/sdk/models/shared/fraudcard.md
 docs/sdk/models/shared/fraudscore.md
 docs/sdk/models/shared/accountholderinformation.md
-docs/sdk/models/shared/status.md
-docs/sdk/models/shared/healthcheckresource.md
 docs/sdk/models/shared/security.md
 docs/sdk/models/errors/messages.md
-docs/sdk/models/errors/validationmessage.md
-docs/sdk/models/errors/responsestatus.md
-docs/sdk/models/errors/information.md
 docs/sdk/models/errors/status.md
 docs/sdk/models/errors/healthcheckresource.md
 docs/sdks/testingpayments/README.md

@@ -73,10 +73,7 @@ export class HealthCheck {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.healthCheckResource = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.HealthCheckResource
-                    );
+                    res.healthCheckResource = JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,
@@ -168,10 +165,7 @@ export class HealthCheck {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.healthCheckResource = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.HealthCheckResource
-                    );
+                    res.healthCheckResource = JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,
@@ -264,10 +258,7 @@ export class HealthCheck {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.healthCheckResource = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.HealthCheckResource
-                    );
+                    res.healthCheckResource = JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + responseContentType,

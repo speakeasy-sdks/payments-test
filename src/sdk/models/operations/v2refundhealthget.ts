@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../../../sdk/models/shared";
+import * as errors from "../../../sdk/models/errors";
 import { AxiosResponse } from "axios";
 
 export class V2RefundHealthGetResponse extends SpeakeasyBase {
@@ -29,5 +29,5 @@ export class V2RefundHealthGetResponse extends SpeakeasyBase {
      * Success
      */
     @SpeakeasyMetadata()
-    healthCheckResource?: shared.HealthCheckResource;
+    healthCheckResource?: errors.HealthCheckResource;
 }
