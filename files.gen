@@ -149,7 +149,6 @@ src/sdk/models/errors/healthcheckresource.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/v2capturebyidgetrequest.md
 docs/sdk/models/operations/v2capturebyidgetresponse.md
 docs/sdk/models/operations/v2capturegetrequest.md
@@ -325,4 +324,5 @@ docs/sdks/testingpayments/README.md
 docs/sdks/transactions/README.md
 docs/sdks/fraud/README.md
 docs/sdks/healthcheck/README.md
+USAGE.md
 .gitattributes

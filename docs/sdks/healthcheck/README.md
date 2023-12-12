@@ -20,10 +20,10 @@ Health check for payments
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -32,7 +32,9 @@ import { TestingPayments } from "testingPayments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -61,10 +63,10 @@ Health check for refunds
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -73,7 +75,9 @@ import { TestingPayments } from "testingPayments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -102,10 +106,10 @@ Health check for verifications
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -114,7 +118,9 @@ import { TestingPayments } from "testingPayments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

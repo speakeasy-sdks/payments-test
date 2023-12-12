@@ -1,11 +1,11 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async () => {
+async function run() {
     const sdk = new TestingPayments({
         security: {
-            bearerAuth: "",
+            bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
         },
     });
 
@@ -19,7 +19,9 @@ import { TestingPayments } from "testingPayments";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

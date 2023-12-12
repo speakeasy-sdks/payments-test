@@ -20,10 +20,10 @@ Retrieve fraud score of a payment instrument with cardholder information without
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -36,7 +36,9 @@ import { TestingPayments } from "testingPayments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -68,10 +70,10 @@ import { TestingPayments } from "testingPayments";
 import { Currency } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -149,7 +151,9 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -179,10 +183,10 @@ Retrieve fraud score of a payment instrument with cardholder information without
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -195,7 +199,9 @@ import { TestingPayments } from "testingPayments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

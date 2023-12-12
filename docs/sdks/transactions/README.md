@@ -30,10 +30,10 @@ Request capture details for a specific capture request by captureId
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -47,7 +47,9 @@ import { TestingPayments } from "testingPayments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -77,10 +79,10 @@ Request capture details for a specific capture request
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -94,7 +96,9 @@ import { TestingPayments } from "testingPayments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -142,10 +146,10 @@ import {
 } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -279,7 +283,9 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -309,10 +315,10 @@ Get a specific payment transaction by transaction Id
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -325,7 +331,9 @@ import { TestingPayments } from "testingPayments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -355,10 +363,10 @@ Request Original Authorization Transaction details
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -372,7 +380,9 @@ import { TestingPayments } from "testingPayments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -403,10 +413,10 @@ Update an existing payment 1.Capture a payment for settlement. 2. Void a payment
 import { TestingPayments } from "testingPayments";
 import { CaptureMethod } from "testingPayments/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -426,7 +436,9 @@ import { CaptureMethod } from "testingPayments/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -479,10 +491,10 @@ import {
 } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -651,7 +663,9 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -681,10 +695,10 @@ Get a specific refund transaction by transaction Id
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -697,7 +711,9 @@ import { TestingPayments } from "testingPayments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -727,10 +743,10 @@ Creates a refund request and returns funds to the consumer. 1. For refund associ
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -744,7 +760,9 @@ import { TestingPayments } from "testingPayments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -786,10 +804,10 @@ import {
 } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -888,7 +906,9 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -918,10 +938,10 @@ Request Original Authorization Transaction details for an incoming notification 
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -935,7 +955,9 @@ import { TestingPayments } from "testingPayments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -965,10 +987,10 @@ Creates a refund request and returns funds to the consumer. 1. For refund associ
 ```typescript
 import { TestingPayments } from "testingPayments";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -982,7 +1004,9 @@ import { TestingPayments } from "testingPayments";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1030,10 +1054,10 @@ import {
 } from "testingPayments/dist/sdk/models/shared";
 import { RFCDate } from "testingPayments/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new TestingPayments({
     security: {
-      bearerAuth: "",
+      bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -1120,7 +1144,9 @@ import { RFCDate } from "testingPayments/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
