@@ -57,7 +57,7 @@ run();
 | Error Object                    | Status Code                     | Content Type                    |
 | ------------------------------- | ------------------------------- | ------------------------------- |
 | errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
-| errors.SDKError                 | 400-600                         | */*                             |
+| errors.SDKError                 | 4xx-5xx                         | */*                             |
 
 ## v2FraudCheckPost
 
@@ -172,7 +172,7 @@ run();
 | Error Object                | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.Messages             | 400,401,403,412,500,503,504 | application/json            |
-| errors.SDKError             | 400-600                     | */*                         |
+| errors.SDKError             | 4xx-5xx                     | */*                         |
 
 ## v2FraudCheckget
 
@@ -220,4 +220,4 @@ run();
 | Error Object                    | Status Code                     | Content Type                    |
 | ------------------------------- | ------------------------------- | ------------------------------- |
 | errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
-| errors.SDKError                 | 400-600                         | */*                             |
+| errors.SDKError                 | 4xx-5xx                         | */*                             |

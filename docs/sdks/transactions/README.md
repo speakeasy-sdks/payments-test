@@ -68,7 +68,7 @@ run();
 | Error Object                    | Status Code                     | Content Type                    |
 | ------------------------------- | ------------------------------- | ------------------------------- |
 | errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
-| errors.SDKError                 | 400-600                         | */*                             |
+| errors.SDKError                 | 4xx-5xx                         | */*                             |
 
 ## v2CaptureGet
 
@@ -117,7 +117,7 @@ run();
 | Error Object                    | Status Code                     | Content Type                    |
 | ------------------------------- | ------------------------------- | ------------------------------- |
 | errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
-| errors.SDKError                 | 400-600                         | */*                             |
+| errors.SDKError                 | 4xx-5xx                         | */*                             |
 
 ## v2CapturePost
 
@@ -304,7 +304,7 @@ run();
 | Error Object                | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.Messages             | 400,401,403,412,500,503,504 | application/json            |
-| errors.SDKError             | 400-600                     | */*                         |
+| errors.SDKError             | 4xx-5xx                     | */*                         |
 
 ## v2PaymentByIdGet
 
@@ -352,7 +352,7 @@ run();
 | Error Object                    | Status Code                     | Content Type                    |
 | ------------------------------- | ------------------------------- | ------------------------------- |
 | errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
-| errors.SDKError                 | 400-600                         | */*                             |
+| errors.SDKError                 | 4xx-5xx                         | */*                             |
 
 ## v2PaymentGet
 
@@ -401,7 +401,7 @@ run();
 | Error Object                    | Status Code                     | Content Type                    |
 | ------------------------------- | ------------------------------- | ------------------------------- |
 | errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
-| errors.SDKError                 | 400-600                         | */*                             |
+| errors.SDKError                 | 4xx-5xx                         | */*                             |
 
 ## v2PaymentPatch
 
@@ -457,7 +457,7 @@ run();
 | Error Object                    | Status Code                     | Content Type                    |
 | ------------------------------- | ------------------------------- | ------------------------------- |
 | errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
-| errors.SDKError                 | 400-600                         | */*                             |
+| errors.SDKError                 | 4xx-5xx                         | */*                             |
 
 ## v2PaymentPost
 
@@ -684,7 +684,7 @@ run();
 | Error Object                | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.Messages             | 400,401,403,412,500,503,504 | application/json            |
-| errors.SDKError             | 400-600                     | */*                         |
+| errors.SDKError             | 4xx-5xx                     | */*                         |
 
 ## v2RefundByIdGet
 
@@ -732,7 +732,7 @@ run();
 | Error Object                    | Status Code                     | Content Type                    |
 | ------------------------------- | ------------------------------- | ------------------------------- |
 | errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
-| errors.SDKError                 | 400-600                         | */*                             |
+| errors.SDKError                 | 4xx-5xx                         | */*                             |
 
 ## v2RefundGet
 
@@ -781,7 +781,7 @@ run();
 | Error Object                    | Status Code                     | Content Type                    |
 | ------------------------------- | ------------------------------- | ------------------------------- |
 | errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
-| errors.SDKError                 | 400-600                         | */*                             |
+| errors.SDKError                 | 4xx-5xx                         | */*                             |
 
 ## v2RefundPost
 
@@ -927,7 +927,7 @@ run();
 | Error Object                    | Status Code                     | Content Type                    |
 | ------------------------------- | ------------------------------- | ------------------------------- |
 | errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
-| errors.SDKError                 | 400-600                         | */*                             |
+| errors.SDKError                 | 4xx-5xx                         | */*                             |
 
 ## v2VerificationByIdGet
 
@@ -976,7 +976,7 @@ run();
 | Error Object                    | Status Code                     | Content Type                    |
 | ------------------------------- | ------------------------------- | ------------------------------- |
 | errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
-| errors.SDKError                 | 400-600                         | */*                             |
+| errors.SDKError                 | 4xx-5xx                         | */*                             |
 
 ## v2VerificationGet
 
@@ -1025,7 +1025,7 @@ run();
 | Error Object                    | Status Code                     | Content Type                    |
 | ------------------------------- | ------------------------------- | ------------------------------- |
 | errors.Messages                 | 400,401,403,404,412,500,503,504 | application/json                |
-| errors.SDKError                 | 400-600                         | */*                             |
+| errors.SDKError                 | 4xx-5xx                         | */*                             |
 
 ## v2VerificationPost
 
@@ -1165,4 +1165,4 @@ run();
 | Error Object                | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.Messages             | 400,401,403,412,500,503,504 | application/json            |
-| errors.SDKError             | 400-600                     | */*                         |
+| errors.SDKError             | 4xx-5xx                     | */*                         |
