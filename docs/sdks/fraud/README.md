@@ -93,7 +93,7 @@ async function run() {
         fullName: "Jane Doe",
         phone: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         referenceId: "AB12345678",
       },
@@ -120,7 +120,7 @@ async function run() {
       },
       paymentMethodType: {
         card: {
-          accountNumber: "string",
+          accountNumber: "<value>",
           expiry: {
             month: 5,
             year: 2020,
@@ -131,7 +131,7 @@ async function run() {
         fullName: "Jane Doe",
         phone: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         shippingAddress: {
           city: "Nowhere",

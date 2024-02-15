@@ -170,11 +170,11 @@ async function run() {
         fullName: "Jane Doe",
         mobile: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         phone: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         referenceId: "AB12345678",
       },
@@ -206,7 +206,7 @@ async function run() {
       multiCapture: {},
       paymentMethodType: {
         card: {
-          accountNumber: "string",
+          accountNumber: "<value>",
           accountUpdater: {
             requestAccountUpdater: true,
           },
@@ -258,11 +258,11 @@ async function run() {
         fullName: "Jane Doe",
         mobile: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         phone: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         shippingAddress: {
           city: "Nowhere",
@@ -517,11 +517,11 @@ async function run() {
         fullName: "Jane Doe",
         mobile: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         phone: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         referenceId: "AB12345678",
       },
@@ -553,8 +553,8 @@ async function run() {
       merchantOrderNumber: "X1234",
       paymentMethodType: {
         ach: {
-          accountNumber: "string",
-          financialInstitutionRoutingNumber: "string",
+          accountNumber: "<value>",
+          financialInstitutionRoutingNumber: "<value>",
         },
         applepay: {
           encryptedPaymentBundle: {
@@ -567,17 +567,17 @@ async function run() {
         },
         boleto: {
           bankCode: BankCode.Jpm,
-          documentNumber: "string",
+          documentNumber: "<value>",
           dueDate: new RFCDate("2020-09-20"),
           expiryDate: new RFCDate("2020-09-20"),
-          paidAmount: "string",
+          paidAmount: "<value>",
           paidDate: "2018-12-21T09:30:15.987Z",
           ticketInstructions: "Pay to maturity",
           type: TypeT.Bdp,
-          uniqueNumber: "string",
+          uniqueNumber: "<value>",
         },
         card: {
-          accountNumber: "string",
+          accountNumber: "<value>",
           accountUpdater: {
             requestAccountUpdater: true,
           },
@@ -638,11 +638,11 @@ async function run() {
         fullName: "Jane Doe",
         mobile: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         phone: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         shippingAddress: {
           city: "Nowhere",
@@ -830,11 +830,11 @@ async function run() {
         fullName: "Jane Doe",
         mobile: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         phone: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         referenceId: "AB12345678",
       },
@@ -862,11 +862,11 @@ async function run() {
       merchantOrderNumber: "X1234",
       paymentMethodType: {
         ach: {
-          accountNumber: "string",
-          financialInstitutionRoutingNumber: "string",
+          accountNumber: "<value>",
+          financialInstitutionRoutingNumber: "<value>",
         },
         card: {
-          accountNumber: "string",
+          accountNumber: "<value>",
           authentication: {
             electronicCommerceIndicator: "05",
           },
@@ -1081,11 +1081,11 @@ async function run() {
         fullName: "Jane Doe",
         mobile: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         phone: {
           countryCode: 1,
-          phoneNumber: "string",
+          phoneNumber: "<value>",
         },
         referenceId: "AB12345678",
       },

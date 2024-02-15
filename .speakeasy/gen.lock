@@ -4,15 +4,15 @@ management:
   docChecksum: 218bae4b1a129b90279f3d7afe60bbc2
   docVersion: 2.0.52
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 0.11.0
-  configChecksum: 9b618efce3ff01c17eb66eb85ecc83de
+  generationVersion: 2.258.2
+  releaseVersion: 0.11.1
+  configChecksum: 784e9545051bedf03e9d4df9d3e01385
   repoURL: https://github.com/speakeasy-sdks/payments-test.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/payments-test
 features:
   typescript:
-    core: 3.4.1
+    core: 3.4.7
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
     inputOutputModels: 2.83.0
